@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TimeTestCase" project="OOPFun" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hackbulgaria.corejava.oopfun.TimeTestCase" time="0.002">
+    <testcase name="test" classname="com.hackbulgaria.corejava.oopfun.TimeTestCase" time="0.002"/>
+  </testsuite>
+</testrun>

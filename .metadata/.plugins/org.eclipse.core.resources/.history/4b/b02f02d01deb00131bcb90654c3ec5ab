@@ -1,0 +1,29 @@
+package com.hackbulgaria.corejava.oopfun;
+
+public class Time {
+
+    int day;
+    int month;
+    int year;
+    
+    int hour;
+    int minute;
+    int second;
+    
+    public Time(int day, int month, int year, int hour, int minute, int second) {
+        super();
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+    
+    @Override
+    public String toString() {
+        String formatedDate = hour + ":" + minute + ":" + second + " " + day + "." + month + "." + year; 
+        return formatedDate;
+    }
+    
+}

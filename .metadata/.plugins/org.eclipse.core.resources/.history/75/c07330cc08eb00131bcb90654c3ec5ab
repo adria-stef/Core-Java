@@ -1,0 +1,9 @@
+package com.hackbulgaria.corejava.junithelloworld;
+
+public class JunitHelloWorld {
+    public static int getNumberOfDigits(int a) {
+        
+        return -1;
+    }
+
+}

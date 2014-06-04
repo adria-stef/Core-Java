@@ -1,0 +1,10 @@
+package com.hackbulgaria.corejava.missingjoin;
+
+public class MissingJoin {
+    //stichMeUp(" ", "Dnes", "vidqh", 5, "hodeshti", "meduzi") => "Dnes widqh 5 hodeshti maduzi"
+    public static String stichMeUp(String glue, String...strings) {
+        
+        return null;
+    }
+
+}

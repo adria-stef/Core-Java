@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MissingJoinTestCase" project="2014-06-03MissingJoin" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hackbulgaria.corejava.missingjoin.MissingJoinTestCase" time="0.0">
+    <testcase name="floatTest" classname="com.hackbulgaria.corejava.missingjoin.MissingJoinTestCase" time="0.0"/>
+    <testcase name="StringTest" classname="com.hackbulgaria.corejava.missingjoin.MissingJoinTestCase" time="0.0"/>
+    <testcase name="doubleTest" classname="com.hackbulgaria.corejava.missingjoin.MissingJoinTestCase" time="0.0"/>
+    <testcase name="intTest" classname="com.hackbulgaria.corejava.missingjoin.MissingJoinTestCase" time="0.0"/>
+  </testsuite>
+</testrun>

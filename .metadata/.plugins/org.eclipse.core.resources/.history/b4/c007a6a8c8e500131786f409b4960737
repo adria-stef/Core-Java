@@ -1,0 +1,49 @@
+package com.hackbulgaria.problems;
+
+public class Problems {
+
+    public static boolean isOdd(int n) {
+        
+        if (n % 2 == 0) {
+            return false;
+        } else {
+            return true;
+        }
+      
+    }
+    
+    public static boolean isPrime(int n) {
+        
+        boolean isPrime = false;
+        for(int i = 1; i < n/2; i++) {
+            if (n % i != 0) {
+                isPrime = true;
+            }
+        }
+        return isPrime;
+    }
+
+    public static int min(int... array) {
+        int min = array[0];
+         for(int i = 0; i < array.length; i++) {
+             
+             if (array[i] < array[0])  {
+                 min = array[i];
+
+             }
+             
+         }
+    return min;    
+    }
+    
+    //int kthMin(int k, int[] array)
+    
+    public static void main(String[] args) {
+
+       System.out.println(min(3, 4, 5));
+        isOdd(3);
+        isPrime(3);
+        min(3, 4);
+    }
+
+}

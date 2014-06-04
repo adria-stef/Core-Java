@@ -1,0 +1,96 @@
+package com.hackbulgaria.corejava.redusedfilepathtdd;
+
+public class ReducedFilePath {
+
+    public ReducedFilePath() {
+        super();
+    }
+
+    public String reducedFilePath(String path) {
+
+        String result = "";
+        result = removeSlashes(path);
+        result = removeDoubleDot(result);
+        result = removeSingleDot(result);
+
+        return result;
+    }
+
+    private String removeSlashes(String path) {
+
+        String singleSlash = "/";
+        String doubleSlash = "//";
+
+        String result = path;
+
+        if (result.length() == 0) {
+            result = "";
+        }
+
+        if (result.equals(singleSlash) || result.equals("")) {
+            return result;
+        } else {
+
+            while (result.contains(doubleSlash)) {
+                result = result.replace(doubleSlash, singleSlash);
+            }
+
+            if (result.charAt(result.length() - 1) == '/' && result.length() != 1) {
+                result = result.substring(0, result.length() - 1);
+            }
+        }
+        return result;
+    }
+
+    private String removeDoubleDot(String path) {
+
+        String result = path;
+
+        String doubleDot = "..";
+        String singleSlash = "/";
+
+        int n = result.indexOf(doubleDot);
+
+        if (n > 1) {
+            result = path.substring(0, n - 1);
+
+            int last = result.lastIndexOf(singleSlash);
+
+            result = result.substring(0, last + 1);
+        } else if (n == 1) {
+            result = path.substring(0, n);
+
+            int last = result.lastIndexOf(singleSlash);
+
+            result = result.substring(0, last + 1);
+        }
+
+        return result;
+    }
+
+    private String removeSingleDot(String path) {
+
+        String result = path;
+        String singleDot = "/./";
+        String check = "/.";
+        String singleSlash = "/";
+
+        while (result.contains(singleDot)) {
+            result = result.replace(singleDot, singleSlash);
+        }
+
+        while (result.contains(check)) {
+            result = result.replace(check, "");
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+
+        String s = "/home//radorado/code/./hackbulgaria/week0/../";
+        ReducedFilePath reducer = new ReducedFilePath();
+        s = reducer.reducedFilePath(s);
+        System.out.println(s);
+    }
+}

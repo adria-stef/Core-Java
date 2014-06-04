@@ -1,0 +1,39 @@
+package com.hackbulgaria.corejava.oopfun;
+
+import java.util.Calendar;
+
+public class Time {
+    
+
+
+    public Time(Calendar calendar, int hour, int minute, int second) {
+        super();
+        this.calendar = calendar;
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+
+    Calendar calendar = Calendar.getInstance();
+    
+    int day = calendar.get(Calendar.DAY_OF_MONTH);
+    int month = calendar.get(Calendar.MONTH);
+    int year = calendar.get(Calendar.YEAR);
+    
+    int hour = calendar.get(Calendar.HOUR_OF_DAY);
+    int minute = calendar.get(Calendar.MINUTE);
+    int second = calendar.get(Calendar.SECOND);
+    
+    @Override
+    public String toString() {
+        String formatedDate = String.format("%d:%d:%d %d.%d.%d", hour, minute, second, day, month, year);
+ 
+        return formatedDate;
+    }
+    
+    public static void main(String[] args){
+        Time time = new Time(10, 10, 10, 11, 11, 11);
+        
+        System.out.println(time.toString());
+    }
+}

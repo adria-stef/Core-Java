@@ -1,0 +1,28 @@
+package com.hackbulgaria.corejava.junithelloworld;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.hackbulgaria.corejava.junithelloworld.JunitHelloWorld;
+
+public class JunitHelloWorldTestCase {
+
+    private JunitHelloWorld junitHelloWorld = new JunitHelloWorld();
+    @Before
+    public void setUp() throws Exception {
+        this.junitHelloWorld = new JunitHelloWorld();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void test() {
+        fail("Not yet implemented");
+    }
+
+}

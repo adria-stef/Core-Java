@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.hackbulgaria.corejava.Problems2impl&apos; to &apos;Problems2Impl&apos;&#x0D;&#x0A;- Original project: &apos;2014-05-29Problemss&apos;&#x0D;&#x0A;- Original element: &apos;com.hackbulgaria.corejava.Problems2impl&apos;&#x0D;&#x0A;- Renamed element: &apos;com.hackbulgaria.corejava.Problems2Impl&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Problems2impl&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.hackbulgaria.corejava{Problems2impl.java[Problems2impl" matchStrategy="1" name="Problems2Impl" qualified="false" references="true" similarDeclarations="false" stamp="1401358720972" textual="false" version="1.0"/>
+</session>

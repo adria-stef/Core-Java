@@ -1,0 +1,35 @@
+package com.hackbulgaria.corejava.oopfun;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TimeTestCase {
+
+    private Time time = new Time();
+    
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void test() {
+        
+        int day = 10;
+        int month = 10;
+        int year = 10;
+        
+        int hour = 11;
+        int minute = 11;
+        int second = 11;
+        
+        assertEquals("10:10:10 11.11.11", time.toString());
+    }
+
+}
