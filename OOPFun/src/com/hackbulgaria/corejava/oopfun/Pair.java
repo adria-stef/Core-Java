@@ -1,6 +1,6 @@
 package com.hackbulgaria.corejava.oopfun;
 
-public class Pair {
+public final class Pair {
 
     private Object first;
     private Object second;

@@ -2,16 +2,17 @@ package com.hackbulgaria.corejava.oopfun;
 
 public interface Stack<T> {
 
-    public void push(T t);
+    //public is not needed, everything in an interface is public 
+    void push(T t);
 
-    public Object pop();
+    Object pop();
 
-    public int length();
+    int length();
 
-    public void clear();
+    void clear();
 
-    public boolean isEmpty();
+    boolean isEmpty();
 
-    public Object peek();
+    Object peek();
 
 }

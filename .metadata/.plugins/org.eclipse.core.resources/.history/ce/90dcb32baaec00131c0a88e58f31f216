@@ -1,0 +1,73 @@
+package com.hackbulgaria.corejava.oopfun;
+
+//add, remove, size, get(int elementIndex), getHead (getFirst), getTail(getLast)
+public class DoublyLinkedList {
+    
+    public Node firstNode;
+    public Node lastNode;
+    public int numberOfElements = 0;
+
+    DoublyLinkedList() {
+        firstNode.next = lastNode;
+        lastNode.previous = firstNode;
+    }
+    
+    public boolean isEmpty() {
+        return (numberOfElements == 0);
+    }
+    
+    public void addFirst(Object a) {
+        Node tempNode = new Node(a);
+        tempNode.next = firstNode;
+        tempNode.previous = null;
+        firstNode = tempNode;
+        numberOfElements++;
+    }
+    
+    public void addLast(Object a) {
+        Node tempNode = new Node(a);
+        tempNode.previous = lastNode;
+        tempNode.next = null;
+        firstNode = tempNode;
+        numberOfElements++;
+    }
+
+    public Object removeFirst() {
+        Node tempNode = firstNode;
+        if (!isEmpty()) {
+            firstNode = firstNode.next;
+            numberOfElements--;
+        } else {
+            System.out.println("Cannot remove!! The DoublyLinkedList is empty!!");
+        }
+        return tempNode;
+    }
+    
+    public Object removeLast() {
+        Node tempNode = lastNode;
+        if (!isEmpty()) {
+            lastNode = lastNode.previous;
+            numberOfElements--;
+        } else {
+            System.out.println("Cannot remove!! The DoublyLinkedList is empty!!");
+        }
+        return tempNode;
+    }
+    
+    public int size() {
+        return numberOfElements;
+    }
+    
+//    public getByIndex (int elementIndex) {
+//        
+//    }
+//    
+//    public getFirst() {
+//        
+//    }
+//    
+//    public getLast() {
+//        
+//    }
+//    
+}

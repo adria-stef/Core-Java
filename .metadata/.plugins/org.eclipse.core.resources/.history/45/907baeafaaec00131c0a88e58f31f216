@@ -1,0 +1,34 @@
+package com.hackbulgaria.corejava.oopfun;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class DoublyLinkedListTestCase {
+
+    private DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+    @Before
+    public void setUp() throws Exception {
+        this.doublyLinkedList = new DoublyLinkedList();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void testIsEmpty() {
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+        assertTrue(doublyLinkedList.isEmpty());
+    }
+    
+    @Test
+    public void testSize() {
+        
+        assertTrue(doublyLinkedList.isEmpty());
+    }
+
+
+}

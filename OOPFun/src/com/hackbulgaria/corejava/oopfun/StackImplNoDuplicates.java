@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class StackImplNoDuplicates<T> implements Stack<T> {
 
-    int size = -1;
+    int size = 0;
     static final int DEFAULT_CAPACITY = 100;
     Object elements[];
 
@@ -22,11 +22,12 @@ public class StackImplNoDuplicates<T> implements Stack<T> {
             elements = Arrays.copyOf(elements, newSize);
         }
 
-        for (int i = -1; i < elements.length; i++) {
+        for (int i = 0; i < elements.length; i++) {
             if (t.equals(elements[i])) {
                 System.out.println("You cannot push that element. Stack doesn't allow duplicates! Try again!");
             } else {
                 elements[size++] = t;
+                break;
             }
         }
 
@@ -43,19 +44,19 @@ public class StackImplNoDuplicates<T> implements Stack<T> {
     @Override
     public int length() {
 
-        return size + 1;
+        return size;
     }
 
     @Override
     public void clear() {
 
-        size = -1;
+        size = 0;
     }
 
     @Override
     public boolean isEmpty() {
 
-        return (size == -1);
+        return (size == 0);
     }
 
     @Override
@@ -64,4 +65,28 @@ public class StackImplNoDuplicates<T> implements Stack<T> {
         return elements[size - 1];
     }
 
+    @Override
+    public String toString() {
+        String stackString = "";
+        for (int i = 0; i < size; i++) {
+            if (i != elements.length) {
+                stackString += elements[i].toString();
+                stackString += " ";
+            } else {
+                stackString += elements[i].toString();
+            }
+        }
+        return stackString;
+    }
+    
+//    public static void main(String[] args) {
+//        StackImplNoDuplicates<Object> stack = new StackImplNoDuplicates<Object>();
+//
+//        stack.push(1);
+//        stack.push(2);
+//        stack.push(3);
+//        stack.push(4);
+//        
+//        System.out.println(stack.toString());
+//    }
 }

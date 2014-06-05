@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class StackImpl<T> implements Stack<T> {
 
-    int size = -1;
+    int size = 0;
     static final int DEFAULT_CAPACITY = 100;
     Object elements[];
 
@@ -36,19 +36,19 @@ public class StackImpl<T> implements Stack<T> {
     @Override
     public int length() {
 
-        return size + 1;
+        return size;
     }
 
     @Override
     public void clear() {
         
-        size = -1;
+        size = 0;
     }
 
     @Override
     public boolean isEmpty() {
         
-        return (size == -1);
+        return (size == 0);
     }
 
     @Override

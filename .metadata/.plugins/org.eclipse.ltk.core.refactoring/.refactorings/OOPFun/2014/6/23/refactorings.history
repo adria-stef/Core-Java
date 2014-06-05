@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.hackbulgaria.corejava.oopfun.DoublyLinkedList&apos; to &apos;DoublyLinkedListTestCase&apos;&#x0D;&#x0A;- Original project: &apos;OOPFun&apos;&#x0D;&#x0A;- Original element: &apos;com.hackbulgaria.corejava.oopfun.DoublyLinkedList&apos;&#x0D;&#x0A;- Renamed element: &apos;com.hackbulgaria.corejava.oopfun.DoublyLinkedListTestCase&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DoublyLinkedList&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/test&lt;com.hackbulgaria.corejava.oopfun{DoublyLinkedList.java[DoublyLinkedList" matchStrategy="1" name="DoublyLinkedListTestCase" qualified="false" references="true" similarDeclarations="false" stamp="1401964899414" textual="false" version="1.0"/>
+</session>
