@@ -206,5 +206,18 @@
     "jarFileModificationDate": "2014-02-24T04:57:48+02:00",
     "location": "D:\\Adii\\Documents\\CoreJava\\eclipse\\plugins\\org.hamcrest.core_1.3.0.v201303031735.jar",
     "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.io",
+    "version": {
+      "major": 2,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b1b6ea3b7e4aa4f492509a4952029cd8e48019ad",
+    "jarFileModificationDate": "2014-05-31T12:04:16.661+03:00",
+    "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\2014-05-31DebuggingFun\\libs\\commons-io-2.4.jar",
+    "javaRuntime": false
   }
 ]

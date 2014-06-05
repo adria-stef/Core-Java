@@ -1,0 +1,17 @@
+package com.hackbulgaria.corejava.oopfun;
+
+public interface Stack<T> {
+
+    public void push(T t);
+
+    public int pop();
+
+    public int length();
+
+    public void clear();
+
+    public boolean isEmpty();
+
+    public int peek();
+
+}

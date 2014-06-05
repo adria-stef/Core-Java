@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.hackbulgaria.corejava.oopfun.Pair"/>
+<fullyQualifiedTypeName name="com.hackbulgaria.corejava.oopfun.Stack"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="T"/>
+<fullyQualifiedTypeName name="org.hamcrest.core.IsEqual"/>
+<fullyQualifiedTypeName name="com.hackbulgaria.corejava.oopfun.StackImpl"/>
+<fullyQualifiedTypeName name="com.hackbulgaria.corejava.oopfun.StackImplNoDuplicates"/>
 </qualifiedTypeNameHistroy>

@@ -3,5 +3,15 @@
     "coordinate": "jre:jre:zip:call:1.0.0",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\rt.jar",
     "status": "RESOLVED"
+  },
+  "D:\\Adii\\Documents\\CoreJava\\workspace\\2014-06-03ReducedFilePathTDD\\src": {
+    "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\2014-06-03ReducedFilePathTDD\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\2014-06-03ReducedFilePathTDD\\src\u0027. Skipped."
+  },
+  "D:\\Adii\\Documents\\CoreJava\\workspace\\OOPFun\\src": {
+    "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\OOPFun\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\OOPFun\\src\u0027. Skipped."
   }
 }

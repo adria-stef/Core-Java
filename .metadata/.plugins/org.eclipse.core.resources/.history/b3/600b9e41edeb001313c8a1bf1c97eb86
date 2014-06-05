@@ -1,0 +1,56 @@
+package com.hackbulgaria.corejava.oopfun;
+
+import java.util.Arrays;
+
+public class StackImpl<T> implements Stack<T> {
+
+    int size = 0;
+    static final int DEFAULT_CAPACITY = 100;
+    Object elements[];
+
+    public StackImpl() {
+        elements = new Object[DEFAULT_CAPACITY];
+    }
+
+    @Override
+    public void push(T t) {
+        if (size == elements.length) {
+            int newSize = elements.length * 2;
+            elements = Arrays.copyOf(elements, newSize);
+        }
+
+        elements[size++] = t;
+    }
+
+    @Override
+    public int pop() {
+        T t = (T) elements[--size];
+        elements[size] = null;
+        return t;
+    }
+
+    @Override
+    public int length() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public void clear() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public boolean isEmpty() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public int peek() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+}

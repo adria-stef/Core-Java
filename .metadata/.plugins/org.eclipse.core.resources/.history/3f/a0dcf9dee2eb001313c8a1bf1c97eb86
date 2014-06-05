@@ -1,0 +1,37 @@
+package com.hackbulgaria.corejava.oopfun;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class PairTestCase {
+
+    private Pair pair = new Pair();
+    
+    @Before
+    public void setUp() throws Exception {
+        this.pair = new Pair();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+
+    @Test
+    public void testEquals() {
+        pair.setFirst(3);
+        pair.setSecond(2);
+        assertEquals(true, pair.equals(pair));
+    }
+
+    @Test
+    public void testToString() {
+        pair.setFirst(1);
+        pair.setSecond(2);
+        assertEquals("(1, 2)", pair.toString());
+    }
+
+}
