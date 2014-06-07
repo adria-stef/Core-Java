@@ -1,0 +1,35 @@
+package com.hackbulgaria.corejava.collections1;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+
+public class ReverseCollection {
+    // <T>
+    public static void reverse(Collection<Integer> argument) {
+
+        // List<Integer> argumentAsList = new LinkedList<>();
+        // argumentAsList.addAll(argument);
+        //
+        // List<Integer> reversed = new LinkedList<>();
+        //
+        // for (int i = argument.size(); i >= 0; i--) {
+        // reversed.set(i, argumentAsList.get(i));
+        // }
+        //
+        Stack<Integer> stackOfInteger = new Stack<>();
+
+        for (Integer item : argument) {
+            stackOfInteger.push(item);
+        }
+
+        argument.clear();
+
+        while(!stackOfInteger.isEmpty()) {
+            argument.add(stackOfInteger.pop());
+        }
+
+    }
+}

@@ -1,0 +1,36 @@
+package com.hackbulgaria.corejava.collections1;
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class ReverseCollectionTestCase {
+
+    private ReverseCollection reverseCollection = new ReverseCollection();
+    @Before
+    public void setUp() throws Exception {
+        this.reverseCollection = new ReverseCollection();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void test() {
+        Collection<Integer> list1 = Arrays.asList(1,2,3);
+        Collection<Integer> list2 = Arrays.asList(3,2,1);
+        
+        ReverseCollection.reverse(list1);
+        String list3 = list1.toString();
+        assertEquals(list2, list3);
+        
+        
+    }
+
+}

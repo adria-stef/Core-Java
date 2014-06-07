@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CheckBracketsTestCase" project="Collections1" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hackbulgaria.corejava.collections1.CheckBracketsTestCase" time="0.001">
+    <testcase name="testEnd" classname="com.hackbulgaria.corejava.collections1.CheckBracketsTestCase" time="0.001"/>
+    <testcase name="testCheck" classname="com.hackbulgaria.corejava.collections1.CheckBracketsTestCase" time="0.0"/>
+    <testcase name="testStart" classname="com.hackbulgaria.corejava.collections1.CheckBracketsTestCase" time="0.0"/>
+    <testcase name="testIfClosingFirst" classname="com.hackbulgaria.corejava.collections1.CheckBracketsTestCase" time="0.0"/>
+    <testcase name="testNumberOfBrackets" classname="com.hackbulgaria.corejava.collections1.CheckBracketsTestCase" time="0.0"/>
+  </testsuite>
+</testrun>

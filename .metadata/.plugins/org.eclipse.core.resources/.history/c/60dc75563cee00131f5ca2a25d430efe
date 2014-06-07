@@ -1,0 +1,20 @@
+package com.hackbulgaria.corejava.collections1;
+
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+
+public class ReverseCollection {
+    // <T>
+    public void reverse(Collection<Integer> argument) {
+
+        List<Integer> argumentAsList = new LinkedList<>();
+        argumentAsList.addAll(argument);
+
+        List<Integer> reversed = new LinkedList<>();
+
+        for (int i = argument.size(); i >= 0; i--) {
+            reversed.set(i, argumentAsList.get(i));
+        }
+    }
+}
