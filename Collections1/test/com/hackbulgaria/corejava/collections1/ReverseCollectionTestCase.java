@@ -12,10 +12,8 @@ import org.junit.Test;
 
 public class ReverseCollectionTestCase {
 
-    private ReverseCollection reverseCollection = new ReverseCollection();
     @Before
     public void setUp() throws Exception {
-        this.reverseCollection = new ReverseCollection();
     }
 
     @After
@@ -28,12 +26,14 @@ public class ReverseCollectionTestCase {
         list1.add(1);
         list1.add(2);
         list1.add(3);
+        
         Collection<Integer> list2 = new ArrayList<>();
         list2.add(3);
         list2.add(2);
         list2.add(1);
         
         ReverseCollection.reverse(list2);
+        
         assertEquals(list2, list1);
     }
 }
