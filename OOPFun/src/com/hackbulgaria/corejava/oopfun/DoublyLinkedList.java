@@ -70,7 +70,7 @@ public class DoublyLinkedList {
     public Object getByIndex (int elementIndex) {
          if(elementIndex < numberOfElements/2) { 
            
-             int j = 0;
+             int j = 1;
              Node tempNode = firstNode;
              while(j != elementIndex) {
                  tempNode = tempNode.next;
@@ -79,7 +79,7 @@ public class DoublyLinkedList {
              return tempNode;
         } else {
 
-            int j = 0;
+            int j = 1;
             Node tempNode = lastNode;
             while(j != elementIndex) {
                 tempNode = tempNode.previous;
