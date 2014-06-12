@@ -1,0 +1,30 @@
+package com.hackbulgaria.corejava.exceptions1;
+
+public class DatabaseCorruptedException extends Exception {
+
+    public DatabaseCorruptedException() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public DatabaseCorruptedException(String message) {
+        super(message);
+        // TODO Auto-generated constructor stub
+    }
+
+    public DatabaseCorruptedException(Throwable cause) {
+        super(cause);
+        // TODO Auto-generated constructor stub
+    }
+
+    public DatabaseCorruptedException(String message, Throwable cause) {
+        super(message, cause);
+        // TODO Auto-generated constructor stub
+    }
+
+    public DatabaseCorruptedException(String message, Throwable cause, boolean enableSuppression,
+            boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+        // TODO Auto-generated constructor stub
+    }
+
+}

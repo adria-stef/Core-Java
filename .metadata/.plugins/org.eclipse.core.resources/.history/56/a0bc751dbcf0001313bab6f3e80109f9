@@ -1,0 +1,15 @@
+package com.hackbulgaria.corejava.collections1;
+
+import java.util.ArrayDeque;
+
+public class BoundedQueue<Integer> extends ArrayDeque<Integer>{
+
+    @Override
+    public boolean offer(Integer e) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    
+    
+}

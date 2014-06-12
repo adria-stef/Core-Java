@@ -1,0 +1,14 @@
+package com.hackbulgaria.corejava.exceptions1;
+
+public class User {
+
+    public User() {
+           String username;
+           
+           public boolean someMethod (username) {
+               
+               return false;
+           }
+    }
+
+}

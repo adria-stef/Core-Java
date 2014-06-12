@@ -1,0 +1,14 @@
+package com.hackbulgaria.corejava.exceptions1;
+
+import java.util.HashMap;
+
+public class NoNullHashMap<K, V> extends HashMap<K, V>{
+
+    //by default == final????
+    private final boolean nullsAllowed = false;
+    
+    public NoNullHashMap(boolean null) {
+        null = false;
+    }
+    
+}

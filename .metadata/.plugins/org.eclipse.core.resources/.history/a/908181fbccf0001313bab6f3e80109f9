@@ -1,0 +1,28 @@
+package com.hackbulgaria.corejava.collections1;
+
+import java.util.ArrayDeque;
+
+public class BoundedQueue<Integer> extends ArrayDeque<Integer> {
+
+    private int maxElements;
+
+    public BoundedQueue(int maxElements) {
+        this.maxElements = maxElements;
+    }
+
+
+    @Override
+    public boolean offer(Integer e) {
+
+        if (this.size() < maxElements) {
+            super.offer(e);
+            return true;
+        } else {
+            this.poll();
+            super.offer(e);
+            return false;
+        }
+
+    }
+
+}
