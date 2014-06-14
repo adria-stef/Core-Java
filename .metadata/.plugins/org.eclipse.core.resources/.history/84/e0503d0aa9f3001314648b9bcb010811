@@ -1,0 +1,6 @@
+package com.hackbulgaria.javacore.exam1;
+
+public class InvalidLogLevelException extends RuntimeException
+{
+
+}

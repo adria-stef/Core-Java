@@ -18,5 +18,20 @@
     "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\Collections1\\src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\Collections1\\src\u0027. Skipped."
+  },
+  "D:\\Adii\\Documents\\CoreJava\\workspace\\Exceptions1\\src": {
+    "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\Exceptions1\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\Exceptions1\\src\u0027. Skipped."
+  },
+  "D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\src": {
+    "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\src\u0027. Skipped."
+  },
+  "D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\test": {
+    "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\test",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\test\u0027. Skipped."
   }
 }

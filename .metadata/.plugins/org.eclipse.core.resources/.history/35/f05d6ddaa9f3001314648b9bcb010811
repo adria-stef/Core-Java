@@ -1,0 +1,52 @@
+package com.hackbulgaria.javacore.exam1;
+
+public class Logger {
+
+    private int LEVEL;
+    private String message;
+    
+    Logger() {
+        LEVEL = 3;
+    }
+    
+    Logger(int LEVEL) {
+        this.LEVEL = LEVEL;
+    }
+    
+    
+    
+    public void setLEVEL(int lEVEL) {
+        LEVEL = LEVEL;
+    }
+
+    public void log(String message) {
+        
+    }
+    
+    public void log(int currentLEVEL, String currentMessage) throws InvalidLogLevelException {
+        try {
+            if (currentLEVEL > LEVEL) {
+                return;
+            } else {
+               System.out.println(currentMessage);
+            }
+        } catch (InvalidLogLevelException e){
+            e.printStackTrace();
+        }
+        
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        Logger logger = new Logger(3);
+        logger.log(2, "2 - should get logged");
+        logger.log(5, "5 - should not get logged");
+        logger.log(3, "3 - should get logged");
+        logger.log("should get logged, default level = 3");
+        
+        logger.setLEVEL(2);
+        logger.log("should not get printed, 2 < 3");
+        
+    }
+}
