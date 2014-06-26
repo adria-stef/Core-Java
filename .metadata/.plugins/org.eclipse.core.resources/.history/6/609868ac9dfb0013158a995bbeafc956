@@ -1,0 +1,28 @@
+package com.hackbulgaria.javacore.files1;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class PropertiesFileParser {
+
+    public PropertiesFileParser() {
+        super();
+    }
+
+//    public Map<String, String> parseProperties(File propertiesFile) {
+//
+//    }
+
+    public Map<String, String> helper(List<String> list) {
+
+        Map<String, String> map = new HashMap<String, String>();
+        for (String member : list) {
+            member.replaceAll("\\s", "");
+            int index = member.indexOf('=');
+            map.put(member.substring(0, index - 1), member.substring(index + 1, member.length()));
+        }
+        return map;
+    }
+}

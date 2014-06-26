@@ -33,5 +33,10 @@
     "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\test",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\test\u0027. Skipped."
+  },
+  "D:\\Adii\\Documents\\CoreJava\\workspace\\Files1\\src": {
+    "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\Files1\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\Files1\\src\u0027. Skipped."
   }
 }

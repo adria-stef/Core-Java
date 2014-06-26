@@ -23,5 +23,8 @@
 <typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(IllegalArgumentException.class[IllegalArgumentException" modifiers="33" timestamp="1400941989622"/>
 <typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Runtime.class[Runtime" modifiers="33" timestamp="1400941989622"/>
 <typeInfo handle="=Exam1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;javax.rmi.CORBA(Util.class[Util" modifiers="33" timestamp="1400941989622"/>
-<typeInfo handle="=Exam1/src&lt;com.hackbulgaria.javacore.exam1{Utils.java[Utils" modifiers="1" timestamp="1402737791488"/>
+<typeInfo handle="=Exam1/src&lt;com.hackbulgaria.javacore.exam1{Utils.java[Utils" modifiers="1" timestamp="1402744239393"/>
+<typeInfo handle="=Files1/src&lt;com.hackbulgaria.javacore.files1{FileUtils.java[FileUtils" modifiers="1" timestamp="1403609882970"/>
+<typeInfo handle="=Files1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(Properties.class[Properties" modifiers="33" timestamp="1400941989622"/>
+<typeInfo handle="=Files1/src&lt;com.hackbulgaria.javacore.files1{PropertiesFileParser.java[PropertiesFileParser" modifiers="1" timestamp="1403612539447"/>
 </typeInfoHistroy>
