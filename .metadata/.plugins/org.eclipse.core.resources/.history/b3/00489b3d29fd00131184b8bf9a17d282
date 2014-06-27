@@ -1,0 +1,31 @@
+package com.hackbulgaria.javacore.files1;
+
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class WordCountResultTestCase {
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void test() throws IOException {
+        Path path = Paths.get("D:\\Adii\\Documents\\CoreJava\\notes\\wordCount.txt");
+        WordCountResult wordCountResult = new WordCountResult(4, 4, 12);
+        assertEquals(wordCountResult, WordCountUtils.wordCount(path));
+        
+    }
+
+}

@@ -1,1 +1,6 @@
 1403607235938	Delete element
+1403780797003	Rename field 'lines'
+1403780803583	Rename field 'words'
+1403780807735	Rename field 'characters'
+1403780871881	Rename local variable 'list'
+1403782090692	Rename local variable 'lineswithoutSpaces'

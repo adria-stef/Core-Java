@@ -20,7 +20,7 @@ import org.junit.Test;
 
 public class PropertiesFileParserTestCase {
 
-    private static final Path filepath = Paths.get("D:\\Adii\\Documents\\CoreJava\\notes\\test.properties");
+    private static final Path filepath = Paths.get("E:\\Adii\\Documents\\CoreJava\\notes\\test.properties");
     List<String> list;
     Map<String, String> map;
     PropertiesFileParser propertiesFileParser = new PropertiesFileParser();

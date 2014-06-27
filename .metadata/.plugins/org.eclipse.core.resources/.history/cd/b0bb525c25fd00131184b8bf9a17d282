@@ -1,0 +1,41 @@
+package com.hackbulgaria.javacore.files1;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+
+public class WordCountUtils {
+
+    // Path filePath =
+    // Paths.get("D:\\Adii\\Documents\\CoreJava\\notes\\wordCount.txt");
+    // File file = filePath.toFile();
+
+    public static WordCountResult wordCount(Path path) throws IOException {
+
+        List<String> listOfLines = Files.readAllLines(path, Charset.defaultCharset());
+        int lineCount = listOfLines.size();
+
+        BufferedReader bf = new BufferedReader(new FileReader(path.toFile()));
+        String lines = bf.readLine();
+        String[] words = lines.split("\\s");
+        int wordCount = words.length;
+
+        // String linesWithoutSpaces = listOfLines.toString().replaceAll("\\s+",
+        // "");
+        // int characterCount = linesWithoutSpaces.length();
+
+        int characterCount = 0;
+        for (String word : words) {
+            characterCount = characterCount + word.length();
+        }
+
+            bf.close();
+
+        return new WordCountResult(lineCount, wordCount, characterCount);
+
+    }
+}

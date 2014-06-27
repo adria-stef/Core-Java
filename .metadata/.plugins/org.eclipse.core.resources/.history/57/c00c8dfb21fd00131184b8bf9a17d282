@@ -1,0 +1,5 @@
+package com.hackbulgaria.javacore.files1;
+
+public class WordCountResult {
+
+}

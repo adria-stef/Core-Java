@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=2014-05-29Problemss/src&lt;com.hackbulgaria.corejava{Problems2.java[Problems2" modifiers="513" timestamp="1401358284618"/>
-<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Integer.class[Integer" modifiers="49" timestamp="1400941989622"/>
 <typeInfo handle="=OOPFun/src&lt;com.hackbulgaria.corejava.oopfun{StackImpl.java[StackImpl" modifiers="1" timestamp="1401962423184"/>
 <typeInfo handle="=OOPFun/src&lt;com.hackbulgaria.corejava.oopfun{StackImplNoDuplicates.java[StackImplNoDuplicates" modifiers="1" timestamp="1401964557417"/>
 <typeInfo handle="=OOPFun/src&lt;com.hackbulgaria.corejava.oopfun{Pair.java[Pair" modifiers="17" timestamp="1401962112162"/>
-<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Iterable.class[Iterable" modifiers="1537" timestamp="1400941989622"/>
-<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(Collection.class[Collection" modifiers="1537" timestamp="1400941989622"/>
+<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Iterable.class[Iterable" modifiers="1537" timestamp="1403851703779"/>
+<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(Collection.class[Collection" modifiers="1537" timestamp="1403851703779"/>
 <typeInfo handle="=Collections1/src&lt;com.hackbulgaria.corejava.collections1{CheckBrackets.java[CheckBrackets" modifiers="1" timestamp="1402140550268"/>
 <typeInfo handle="=OOPFun/src&lt;com.hackbulgaria.corejava.oopfun{Stack.java[Stack" modifiers="513" timestamp="1401961142691"/>
-<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(Stack.class[Stack" modifiers="33" timestamp="1400941989622"/>
 <typeInfo handle="=Collections1/src&lt;com.hackbulgaria.corejava.collections1{ReverseCollection.java[ReverseCollection" modifiers="1" timestamp="1402144971696"/>
-<typeInfo handle="=Collections1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;javax.swing.plaf.basic(BasicSplitPaneDivider$OneTouchActionHandler.class[OneTouchActionHandler" modifiers="2" timestamp="1400941989622"/>
+<typeInfo handle="=Collections1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;javax.swing.plaf.basic(BasicSplitPaneDivider$OneTouchActionHandler.class[OneTouchActionHandler" modifiers="2" timestamp="1403851703779"/>
 <typeInfo handle="=Collections1/src&lt;com.hackbulgaria.corejava.collections1{OnOffCollection.java[OnOffCollection" modifiers="1" timestamp="1402147503829"/>
-<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;sun.nio.cs(ArrayDecoder.class[ArrayDecoder" modifiers="1537" timestamp="1400941989622"/>
-<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(ArrayDeque.class[ArrayDeque" modifiers="33" timestamp="1400941989622"/>
+<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;sun.nio.cs(ArrayDecoder.class[ArrayDecoder" modifiers="1537" timestamp="1403851703779"/>
 <typeInfo handle="=Collections1/src&lt;com.hackbulgaria.corejava.collections1{MyUtilityClass.java[MyUtilityClass" modifiers="1" timestamp="1402423524298"/>
 <typeInfo handle="=Collections1/src&lt;com.hackbulgaria.corejava.collections1{Student.java[Student" modifiers="1" timestamp="1402425704071"/>
 <typeInfo handle="=Collections1/src&lt;com.hackbulgaria.corejava.collections1{StudentSort.java[StudentSort" modifiers="1" timestamp="1402427230231"/>
-<typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;javax.xml.crypto.dsig.spec(ExcC14NParameterSpec.class[ExcC14NParameterSpec" modifiers="49" timestamp="1400941989622"/>
-<typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1400941989622"/>
-<typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(IllegalArgumentException.class[IllegalArgumentException" modifiers="33" timestamp="1400941989622"/>
-<typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Runtime.class[Runtime" modifiers="33" timestamp="1400941989622"/>
-<typeInfo handle="=Exam1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;javax.rmi.CORBA(Util.class[Util" modifiers="33" timestamp="1400941989622"/>
 <typeInfo handle="=Exam1/src&lt;com.hackbulgaria.javacore.exam1{Utils.java[Utils" modifiers="1" timestamp="1402744239393"/>
-<typeInfo handle="=Files1/src&lt;com.hackbulgaria.javacore.files1{FileUtils.java[FileUtils" modifiers="1" timestamp="1403609882970"/>
-<typeInfo handle="=Files1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(Properties.class[Properties" modifiers="33" timestamp="1400941989622"/>
-<typeInfo handle="=Files1/src&lt;com.hackbulgaria.javacore.files1{PropertiesFileParser.java[PropertiesFileParser" modifiers="1" timestamp="1403612539447"/>
+<typeInfo handle="=Files1/src&lt;com.hackbulgaria.javacore.files1{FileUtils.java[FileUtils" modifiers="1" timestamp="1403611562392"/>
+<typeInfo handle="=Files1/src&lt;com.hackbulgaria.javacore.files1{PropertiesFileParser.java[PropertiesFileParser" modifiers="1" timestamp="1403774411377"/>
+<typeInfo handle="=Files1/src&lt;com.hackbulgaria.javacore.files1{WordCountResult.java[WordCountResult" modifiers="1" timestamp="1403783499511"/>
+<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Integer.class[Integer" modifiers="17" timestamp="1403851703779"/>
+<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(Stack.class[Stack" modifiers="1" timestamp="1403851703779"/>
+<typeInfo handle="=2014-05-27Problems/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(ArrayDeque.class[ArrayDeque" modifiers="1" timestamp="1403851703779"/>
+<typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;javax.xml.crypto.dsig.spec(ExcC14NParameterSpec.class[ExcC14NParameterSpec" modifiers="17" timestamp="1403851703779"/>
+<typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="1" timestamp="1403851703779"/>
+<typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(IllegalArgumentException.class[IllegalArgumentException" modifiers="1" timestamp="1403851703779"/>
+<typeInfo handle="=Exceptions1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.lang(Runtime.class[Runtime" modifiers="1" timestamp="1403851703779"/>
+<typeInfo handle="=Exam1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;javax.rmi.CORBA(Util.class[Util" modifiers="1" timestamp="1403851703779"/>
+<typeInfo handle="=Files1/C:\/Program Files\/Java\/jre7\/lib\/rt.jar&lt;java.util(Properties.class[Properties" modifiers="1" timestamp="1403851703779"/>
 </typeInfoHistroy>
