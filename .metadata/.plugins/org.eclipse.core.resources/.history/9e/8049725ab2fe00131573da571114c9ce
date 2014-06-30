@@ -1,0 +1,34 @@
+package com.hackbulgaria.javacore.workingwithlibraries;
+
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import com.nitido.utils.toaster.Toaster;
+
+public class JToasterMessage {
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+        Toaster toaster = new Toaster();
+
+        File image = new File("resources/doge.jpg");
+        BufferedImage bufferedImage = ImageIO.read(image);
+        toaster.setBackgroundImage(bufferedImage);
+
+        toaster.setToasterHeight(bufferedImage.getHeight());
+        toaster.setToasterWidth(bufferedImage.getWidth());
+        // Color toasterColor = new Color(1, 2, 3);
+        toaster.setToasterColor(Color.BLACK);
+        toaster.setMessageColor(Color.red);
+        toaster.setDisplayTime(500);
+
+////        while (true) {
+//            toaster.showToaster("Hey, take a break");
+//            // Thread.sleep(5);
+//        }
+    }
+
+}

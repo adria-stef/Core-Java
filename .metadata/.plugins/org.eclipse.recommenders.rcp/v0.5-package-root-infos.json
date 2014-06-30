@@ -39,6 +39,19 @@
     "javaRuntime": false
   },
   {
+    "symbolicName": "org.apache.commons.io",
+    "version": {
+      "major": 2,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b1b6ea3b7e4aa4f492509a4952029cd8e48019ad",
+    "jarFileModificationDate": "2014-06-28T12:30:46.408+03:00",
+    "location": "E:\\Adii\\Documents\\CoreJava\\workspace\\HackBulgariaLibraries\\libs\\commons-io-2.4.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -137,9 +150,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "a3d1a9689f1c8e36ab64fb669df92076771c42f2",
-    "jarFileModificationDate": "2014-06-27T09:48:20.487+03:00",
-    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\sunmscapi.jar",
+    "jarFileFingerprint": "2500e990d4c26ff16745ae6307270e789f54862d",
+    "jarFileModificationDate": "2014-06-27T09:48:23.842+03:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\charsets.jar",
     "javaRuntime": true
   },
   {
@@ -150,9 +163,35 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "2500e990d4c26ff16745ae6307270e789f54862d",
-    "jarFileModificationDate": "2014-06-27T09:48:23.842+03:00",
-    "location": "C:\\Program Files\\Java\\jre7\\lib\\charsets.jar",
+    "jarFileFingerprint": "a3d1a9689f1c8e36ab64fb669df92076771c42f2",
+    "jarFileModificationDate": "2014-06-27T09:48:20.487+03:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.commons.email",
+    "version": {
+      "major": 1,
+      "minor": 3,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0c15fb9942ec8cafc605a02c774aa0766d52740a",
+    "jarFileModificationDate": "2014-06-28T12:50:14.810+03:00",
+    "location": "E:\\Adii\\Documents\\CoreJava\\workspace\\HackBulgariaLibraries\\libs\\commons-email-1.3.2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9610a55b304bc194bb4406d91918e1b004dbfba6",
+    "jarFileModificationDate": "2014-06-27T09:48:20.167+03:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\jaccess.jar",
     "javaRuntime": true
   },
   {
@@ -169,17 +208,30 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "jre",
+    "symbolicName": "jtoaster-1.0.5",
     "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "9610a55b304bc194bb4406d91918e1b004dbfba6",
-    "jarFileModificationDate": "2014-06-27T09:48:20.167+03:00",
-    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\jaccess.jar",
-    "javaRuntime": true
+    "jarFileFingerprint": "dee066bd2959710335be8640d8bbcc3b75ec3074",
+    "jarFileModificationDate": "2014-06-28T13:23:14.058+03:00",
+    "location": "E:\\Adii\\Documents\\CoreJava\\workspace\\HackBulgariaLibraries\\libs\\jtoaster-1.0.5.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "JavaSyntaxHighlighter-1.2.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "eb39314aee47eeb676302d146e67d77b2683f749",
+    "jarFileModificationDate": "2014-06-28T13:45:43.828+03:00",
+    "location": "E:\\Adii\\Documents\\CoreJava\\workspace\\HackBulgariaLibraries\\libs\\JavaSyntaxHighlighter-1.2.0.jar",
+    "javaRuntime": false
   },
   {
     "symbolicName": "jre",
@@ -206,6 +258,19 @@
     "jarFileModificationDate": "2014-06-27T09:48:20.901+03:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\resources.jar",
     "javaRuntime": true
+  },
+  {
+    "symbolicName": "java-mail-1.4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c451d58874f7030f84b2db22bd5ea12a1c35517c",
+    "jarFileModificationDate": "2014-06-28T12:53:18.409+03:00",
+    "location": "E:\\Adii\\Documents\\CoreJava\\workspace\\HackBulgariaLibraries\\libs\\java-mail-1.4.jar",
+    "javaRuntime": false
   },
   {
     "symbolicName": "jre",

@@ -1,0 +1,36 @@
+package com.hackbulgaria.helloworld;
+
+public class PrimeCheck {
+
+    public static boolean isPrime(int n) {
+        for (int i = 2; i < Math.sqrt(n) + 1; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean isPalindrome(String palindrome) {
+        palindrome.toLowerCase();
+        StringBuilder sb = new StringBuilder(palindrome);
+        StringBuilder reversed = new StringBuilder(palindrome);
+        reversed.reverse();
+        if (sb.equals(reversed)) {
+            System.out.println(sb);
+            System.out.println(reversed);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        // System.out.println(isPrime(4));
+        // System.out.println(isPrime(7));
+        //
+        // System.out.println(isPalindrome("ToToTotot"));
+        System.out.println(isPalindrome("tototo"));
+        // System.out.println(isPalindrome("tototot"));
+    }
+}

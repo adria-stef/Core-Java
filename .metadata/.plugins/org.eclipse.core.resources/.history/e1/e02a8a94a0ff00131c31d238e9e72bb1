@@ -1,0 +1,176 @@
+package com.hackbulgaria.javacore.workingwithlibraries;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+import syntaxhighlight.SyntaxHighlighter;
+import syntaxhighlighter.SyntaxHighlighterParser;
+import syntaxhighlighter.brush.BrushJava;
+import syntaxhighlighter.theme.ThemeRDark;
+
+public class QuickCodeInspector {
+
+    static JFrame frame;
+    File file;
+    int index;
+    SyntaxHighlighter highlighter;
+    static List<File> parentList;
+    static KeyListener keyListener;
+
+    private static SyntaxHighlighter createHighlighter(File file) {
+        SyntaxHighlighterParser parser = new SyntaxHighlighterParser(new BrushJava());
+        SyntaxHighlighter highlighter = new SyntaxHighlighter(parser, new ThemeRDark());
+        highlighter.setHighlightOnMouseOver(true);
+
+        try {
+            highlighter.setContent(file);
+        } catch (IOException ex) {
+            Logger.getLogger(QuickCodeInspector.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return highlighter;
+    }
+
+    // private static JFrame createJFrame(File file, KeyListener keyListener) {
+    private static JFrame createJFrame(File file) {
+        SyntaxHighlighter highlighter = createHighlighter(file);
+        QuickCodeInspector.frame = new JFrame();
+        frame.setTitle(file.getName());
+        frame.setFocusable(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setContentPane(highlighter);
+        frame.setLocationByPlatform(true);
+        frame.pack();
+        frame.setVisible(true);
+        // frame.addKeyListener(keyListener);
+        return frame;
+    }
+
+    private static KeyListener createKyeListener(final QuickCodeInspector quickCodeInspector) {
+
+        final KeyListener keyListener = new KeyListener() {
+
+            @Override
+            public void keyTyped(KeyEvent key) {
+            }
+
+            @Override
+            public void keyReleased(KeyEvent key) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent key) {
+                switch (key.getKeyCode()) {
+                    case KeyEvent.VK_LEFT:
+                        frame = onLeftClick(quickCodeInspector);
+                        break;
+                    case KeyEvent.VK_RIGHT:
+                        frame = onRigthClick(quickCodeInspector);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        };
+        return keyListener;
+    }
+
+    private static List<File> getParentFileList(File file) throws IOException {
+        File parent = file.getParentFile();
+        List<File> parentList = new ArrayList<File>(Arrays.asList(parent.listFiles()));
+
+        for (File checkFile : parentList) {
+            String canonicalPath = checkFile.getCanonicalPath();
+            if (!canonicalPath.endsWith(".java")) {
+                parentList.remove(checkFile);
+            }
+        }
+        
+        System.out.println(parentList.toString());
+        return parentList;
+    }
+
+    private static File getPreviousFile(File file) {
+        int index = parentList.indexOf(file);
+        // File previousFile = parentList.get(index - 1);
+        // return previousFile;
+
+        File previousFile;
+        if (index == 0) {
+            previousFile = parentList.get(parentList.size() - 1);
+        } else {
+            previousFile = parentList.get(index - 1);
+        }
+        return previousFile;
+    }
+
+    private static File getNextFile(File file) {
+        int index = parentList.indexOf(file);
+        // File nextFile = parentList.get(index + 1);
+        // return nextFile;
+
+        File nextFile;
+        if (index == (parentList.size() - 1)) {
+            nextFile = parentList.get(0);
+        } else {
+            nextFile = parentList.get(index + 1);
+        }
+        return nextFile;
+
+    }
+
+    private static JFrame onLeftClick(QuickCodeInspector quickCodeInspector) {
+        frame.dispose();
+        File newFile = getPreviousFile(quickCodeInspector.file);
+        quickCodeInspector.file = newFile;
+        // frame = createJFrame(newFile, keyListener);
+        frame = createJFrame(newFile);
+        frame.addKeyListener(keyListener);
+        return frame;
+    }
+
+    public static JFrame onRigthClick(QuickCodeInspector quickCodeInspector) {
+        frame.dispose();
+        File newFile = getNextFile(quickCodeInspector.file);
+        quickCodeInspector.file = newFile;
+        // JFrame newFrame = createJFrame(newFile, keyListener);
+        frame = createJFrame(newFile);
+        frame.addKeyListener(keyListener);
+        return frame;
+    }
+
+    public static void main(String[] args) {
+        final QuickCodeInspector quickCodeInspector = new QuickCodeInspector();
+        quickCodeInspector.file = new File(args[0]);
+
+        SwingUtilities.invokeLater(new Runnable() {
+
+            @Override
+            public void run() {
+                quickCodeInspector.highlighter = createHighlighter(quickCodeInspector.file);
+                try {
+                    parentList = getParentFileList(quickCodeInspector.file);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                // keyListener = createKyeListener(quickCodeInspector);
+                // frame = createJFrame(quickCodeInspector.file, keyListener);
+
+                keyListener = createKyeListener(quickCodeInspector);
+                frame = createJFrame(quickCodeInspector.file);
+                frame.addKeyListener(keyListener);
+            }
+        });
+    }
+}
+// https://code.google.com/p/java-syntax-highlighter/
