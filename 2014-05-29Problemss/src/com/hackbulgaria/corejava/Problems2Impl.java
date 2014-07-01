@@ -1,7 +1,7 @@
 package com.hackbulgaria.corejava;
 
 import java.util.Arrays;
-import java.util.Objects;
+import java.util.Stack;
 
 public class Problems2Impl implements Problems2 {
 
@@ -62,6 +62,7 @@ public class Problems2Impl implements Problems2 {
     // fails miserably
     // fixed
     // too damn slow
+    @Override
     public long getSmallestMultiple(int upperBound) {
         // long multiple = 1;
         //
@@ -142,34 +143,59 @@ public class Problems2Impl implements Problems2 {
         return true;
     }
 
+    // TODO write a smarter one
+    @Override
+    public boolean isPalindrome(int number) {
+        long numberLong = (long) number;
+        return isPalindrome(numberLong);
+
+    }
+
+    public boolean isPalindrome(long number) {
+        int lenght = String.valueOf(number).length();
+        long[] array = new long[lenght];
+        for (int i = 0; i < lenght; i++) {
+            array[i] = number % 10;
+            number = number / 10;
+
+        }
+        boolean flag;
+        for (int i = 0; i < lenght; i++) {
+            if (array[i] == array[lenght - i - 1]) {
+                flag = true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
     @Override
     public long getLargestPalindrome(long N) {
-
+        for (long i = N; i > 1; i--) {
+            if (isPalindrome(i)) {
+                return i;
+            } else {
+                continue;
+            }
+        }
         return -1;
     }
 
     @Override
     public int[] histogram(short[][] image) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+        int a = image.length;
+        int b = image[0].length;
+        int[] result = new int[a * b + 1];
 
-    @Override
-    public long doubleFac(int n) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public long kthFac(int k, int n) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public int getOddOccurrence(int[] array) {
-        // TODO Auto-generated method stub
-        return 0;
+        short check = 0;
+        for (int i = 0; i < a; i++) {
+            for (int j = 0; j < b; j++) {
+                check = image[i][j];
+                result[check] = result[check] + 1;
+            }
+        }
+        return result;
     }
 
     @Override
@@ -179,7 +205,66 @@ public class Problems2Impl implements Problems2 {
     }
 
     @Override
+    public int getOddOccurrence(int[] array) {
+
+        Stack<Integer> stackOfIntegers = new Stack<>();
+
+        for (int i = 0; i < array.length; i++) {
+
+            if (!(stackOfIntegers.contains(array[i]))) {
+                stackOfIntegers.push(array[i]);
+            } else {
+                stackOfIntegers.pop();
+            }
+        }
+        if (!(stackOfIntegers.isEmpty())) {
+            Integer result = stackOfIntegers.pop();
+            return result;
+        } else {
+            return -1;
+        }
+    }
+
+    @Override
     public long maximalScalarSum(int[] a, int[] b) {
+
+        if (a.length != b.length) {
+            return -1;
+        }
+
+        int[] max = new int[a.length];
+        int maxx = 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                int n = a[i] * b[j];
+                if (maxx < n) {
+                    maxx = n;
+                }
+            }
+            max[i] = maxx;
+        }
+        int sum = 0;
+        for (int c = 0; c < max.length; c++) {
+            sum = sum + max[c];
+        }
+        return sum;
+    }
+
+    @Override
+    public long doubleFac(int n) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    public long factorial(int n) {
+        if (n == 1 || n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+    @Override
+    public long kthFac(int k, int n) {
         // TODO Auto-generated method stub
         return 0;
     }
@@ -218,24 +303,6 @@ public class Problems2Impl implements Problems2 {
     public String reverseEveryWord(String arg) {
         // TODO Auto-generated method stub
         return null;
-    }
-
-    // @Override
-    // public boolean isPalindrome(String argument) {
-    // int n = argument.length();
-    // for (int i = 0; i < (n / 2) + 1; ++i) {
-    // if (argument.charAt(i) != argument.charAt(n - i - 1)) {
-    // return false;
-    // }
-    // }
-    //
-    // return true;
-    // }
-
-    @Override
-    public boolean isPalindrome(int number) {
-        // TODO Auto-generated method stub
-        return false;
     }
 
     @Override

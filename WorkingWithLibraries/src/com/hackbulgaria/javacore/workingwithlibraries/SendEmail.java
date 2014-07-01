@@ -36,7 +36,7 @@ public class SendEmail {
         MultiPartEmail email = new MultiPartEmail();
         email.setHostName("smtp.googlemail.com");
         email.setSmtpPort(465);
-        email.setAuthenticator(new DefaultAuthenticator("adriana.stefanova94", "kudrawtask6513"));
+        email.setAuthenticator(new DefaultAuthenticator("adriana.stefanova94", "password"));
         email.setSSLOnConnect(true);
         email.addTo("aesislava@gmail.com", "Dessy Angelova");
         email.setFrom("adriana.stefanova94@gmail.com", "Adiiii");
