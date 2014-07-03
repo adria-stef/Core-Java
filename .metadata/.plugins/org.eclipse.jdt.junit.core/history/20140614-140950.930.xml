@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UtilsTestCase" project="Exam1" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.hackbulgaria.javacore.exam1.UtilsTestCase" time="0.0">
-    <testcase name="testMonotonous" classname="com.hackbulgaria.javacore.exam1.UtilsTestCase" time="0.0"/>
-    <testcase name="testSort" classname="com.hackbulgaria.javacore.exam1.UtilsTestCase" time="0.0"/>
-    <testcase name="testReverse" classname="com.hackbulgaria.javacore.exam1.UtilsTestCase" time="0.0"/>
-  </testsuite>
-</testrun>

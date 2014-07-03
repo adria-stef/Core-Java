@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="StackImplTestCase" project="OOPFun" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="com.hackbulgaria.corejava.oopfun.StackImplTestCase" time="0.0">
-    <testcase name="testStackPeek" classname="com.hackbulgaria.corejava.oopfun.StackImplTestCase" time="0.0"/>
-    <testcase name="testEmpty" classname="com.hackbulgaria.corejava.oopfun.StackImplTestCase" time="0.0"/>
-    <testcase name="testStackClear" classname="com.hackbulgaria.corejava.oopfun.StackImplTestCase" time="0.0"/>
-    <testcase name="testStackPop" classname="com.hackbulgaria.corejava.oopfun.StackImplTestCase" time="0.0"/>
-  </testsuite>
-</testrun>

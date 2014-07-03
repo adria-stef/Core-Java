@@ -54,59 +54,12 @@ public class Problems2Impl implements Problems2 {
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
-
         return sum / array.length;
     }
 
     // @Override
-    // fails miserably
-    // fixed
-    // too damn slow
     @Override
     public long getSmallestMultiple(int upperBound) {
-        // long multiple = 1;
-        //
-        // for (long i = upperBound; i >= 1; i--) {
-        // multiple *= i;
-        // }
-        // for (int i = 1; i <= multiple; i++) {
-        // boolean isMultiple = true;
-        // for (int j = 2; j < upperBound; j++) {
-        // if (i % j != 0) {
-        // isMultiple = false;
-        // }
-        // }
-        //
-        // if (isMultiple) {
-        // return i;
-        // }
-        // }
-        // definitely the slowest thing ever
-        // long largestMultiple = 1;
-        // for (long i = 1; i <= upperBound; i++) {
-        // largestMultiple *= i;
-        // }
-        //
-        // long smallestMultiple = 1;
-        // // optimize!
-        // int[] divisors = new int[upperBound];
-        // for (int i = upperBound; i >= 1; i--) {
-        // for (int j = 1; j <= i; i++) {
-        //
-        // for (int k = 0; k < divisors.length; k++) {
-        // if (i % j == 0) {
-        // divisors[k] = j;
-        // }
-        // }
-        //
-        // for (int l = 0; l <= divisors.length; l++)
-        // if (smallestMultiple % j != 0) {
-        // smallestMultiple *= divisors[l];
-        // }
-        //
-        // }
-        // }
-        // return smallestMultiple;
         long result = 1;
         for (int i = 2; i <= upperBound; i++) {
             int[] divisors = getDivisors(i);
@@ -139,7 +92,6 @@ public class Problems2Impl implements Problems2 {
                 return false;
             }
         }
-
         return true;
     }
 
@@ -159,10 +111,9 @@ public class Problems2Impl implements Problems2 {
             number = number / 10;
 
         }
-        boolean flag;
         for (int i = 0; i < lenght; i++) {
             if (array[i] == array[lenght - i - 1]) {
-                flag = true;
+                continue;
             } else {
                 return false;
             }
@@ -198,12 +149,18 @@ public class Problems2Impl implements Problems2 {
         return result;
     }
 
+    // fix
     @Override
     public long pow(int a, int b) {
-        long result = a ^ b;
+        long result = 1;
+        if (a == 1) {
+            return b;
+        }
+        result = b * pow(a - 1, b);
         return result;
     }
 
+    // fix
     @Override
     public int getOddOccurrence(int[] array) {
 
@@ -225,6 +182,7 @@ public class Problems2Impl implements Problems2 {
         }
     }
 
+    // fix
     @Override
     public long maximalScalarSum(int[] a, int[] b) {
 
@@ -252,35 +210,61 @@ public class Problems2Impl implements Problems2 {
 
     @Override
     public long doubleFac(int n) {
-        // TODO Auto-generated method stub
-        return 0;
+        long singleFac = factorial(n);
+        return factorial(singleFac);
     }
 
-    public long factorial(int n) {
+    public static long factorial(long n) {
         if (n == 1 || n == 0) {
             return 1;
         } else {
             return n * factorial(n - 1);
         }
     }
+
     @Override
     public long kthFac(int k, int n) {
-        // TODO Auto-generated method stub
-        return 0;
+        long kthFac = n;
+        for (int i = 0; i < k; i++) {
+            kthFac = factorial(kthFac);
+        }
+        return kthFac;
     }
 
     @Override
     public int maxSpan(int[] array) {
-        // TODO Auto-generated method stub
-        return 0;
+        int maxspan = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    if (maxspan < j - i + 1) {
+                        maxspan = j - i + 1;
+                    }
+                }
+            }
+        }
+        return maxspan;
     }
 
     @Override
     public boolean canBalance(int[] array) {
-        // TODO Auto-generated method stub
+        int firstSum = 0;
+        int secondSum = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < i; j++) {
+                for (int k = i; k < array.length; k++) {
+                    firstSum += array[j];
+                    secondSum = array[k];
+                    if (firstSum == secondSum) {
+                        return true;
+                    }
+                }
+            }
+        }
         return false;
     }
 
+    // condition
     @Override
     public int[][] rescale(int[][] original, int newWidth, int newHeight) {
         // TODO Auto-generated method stub
@@ -289,32 +273,57 @@ public class Problems2Impl implements Problems2 {
 
     @Override
     public String reverseMe(String argument) {
-        // TODO Auto-generated method stub
-        return null;
+        StringBuilder reversed = new StringBuilder(argument);
+        reversed = reversed.reverse();
+        return reversed.toString();
     }
 
     @Override
     public String copyEveryChar(String input, int k) {
-        // TODO Auto-generated method stub
-        return null;
+
+        char[] charArray = input.toCharArray();
+        char[] newCharArray = new char[input.length() * k];
+        for (int i = 0; i < charArray.length; i++) {
+            for (int j = i * k; j < (i + 1) * k; j++) {
+                newCharArray[j] = charArray[i];
+            }
+        }
+        return new String(newCharArray);
     }
 
     @Override
     public String reverseEveryWord(String arg) {
-        // TODO Auto-generated method stub
-        return null;
+        String[] words = arg.split("\\s");
+        for (String word : words) {
+            arg = arg.replaceFirst(word, (String) (reverseWord(word)));
+        }
+        return arg;
     }
 
+    public static String reverseWord(String argument) {
+        return new StringBuilder(argument).reverse().toString();
+    }
+
+    // condition
     @Override
     public int getPalindromeLength(String input) {
         // TODO Auto-generated method stub
         return 0;
     }
 
+    // fix
     @Override
     public int countOcurrences(String needle, String haystack) {
-        // TODO Auto-generated method stub
-        return 0;
+        if (haystack == "") {
+            return 0;
+        } else {
+            int count = 0;
+            while (needle.contains(haystack)) {
+                count++;
+                needle.replace(haystack, "");
+            }
+            return count;
+        }
     }
 
     @Override

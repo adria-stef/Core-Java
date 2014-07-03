@@ -1,8 +1,0 @@
-package com.hackbulgaria.corejava.oopfun;
-
-public class Citroen {
-    @Override
-    public String toString() {
-        return "Citroen@q2789";
-    }
-}

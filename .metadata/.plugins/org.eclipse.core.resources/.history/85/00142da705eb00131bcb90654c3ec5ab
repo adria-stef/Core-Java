@@ -1,7 +1,0 @@
-package com.hacbulgaria.corejava.tddintro;
-
-public class MaximumScalar {
-    public static long maxScalarProduct(int [] a, int[] b){
-    return -1;
-    }
-}

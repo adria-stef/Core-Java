@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DoublyLinkedListTestCase" project="OOPFun" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.hackbulgaria.corejava.oopfun.DoublyLinkedListTestCase" time="0.007">
-    <testcase name="testSize" classname="com.hackbulgaria.corejava.oopfun.DoublyLinkedListTestCase" time="0.0"/>
-    <testcase name="testIsEmpty" classname="com.hackbulgaria.corejava.oopfun.DoublyLinkedListTestCase" time="0.007"/>
-    <testcase name="testRemove" classname="com.hackbulgaria.corejava.oopfun.DoublyLinkedListTestCase" time="0.0"/>
-  </testsuite>
-</testrun>

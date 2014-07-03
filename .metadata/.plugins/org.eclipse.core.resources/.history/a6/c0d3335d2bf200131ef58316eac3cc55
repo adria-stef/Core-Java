@@ -1,9 +1,0 @@
-package com.hackbulgaria.corejava.exceptions1;
-
-public class ServiceNotAvailableAtTheMomentException extends Exception {
-
-    ServiceNotAvailableAtTheMomentException() {
-        super("Service is not available at the moment. There might be a network problem. Check your hardware devices");
-    }
-    
-}

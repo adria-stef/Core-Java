@@ -7,5 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.hackbulgaria.corejava.Problems2Impl"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="C:\Users\Adriana\Desktop\car.jpg"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="2014-05-29Problemss"/>
 </launchConfiguration>

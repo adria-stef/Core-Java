@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="JunitHelloWorldTestCase" project="2014-06-03JunitHelloWorld" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.hackbulgaria.corejava.junithelloworld.JunitHelloWorldTestCase" time="0.0">
-    <testcase name="standartTest" classname="com.hackbulgaria.corejava.junithelloworld.JunitHelloWorldTestCase" time="0.0"/>
-    <testcase name="singleDigitTest" classname="com.hackbulgaria.corejava.junithelloworld.JunitHelloWorldTestCase" time="0.0"/>
-    <testcase name="bigTest" classname="com.hackbulgaria.corejava.junithelloworld.JunitHelloWorldTestCase" time="0.0"/>
-  </testsuite>
-</testrun>

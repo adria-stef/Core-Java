@@ -1,8 +1,0 @@
-package com.hackbulgaria.corejava.oopfun;
-
-public interface Stack {
-
-    public void push(int a);
-    
-}
-

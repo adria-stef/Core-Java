@@ -1,8 +1,0 @@
-package com.hackbulgaria.javacore.exam1;
-
-public class InvalidLogLevelException extends RuntimeException {
-
-    public InvalidLogLevelException() {
-        super("This Logger does not allow LEVEL under 0. Redifine level!");
-    }
-}
