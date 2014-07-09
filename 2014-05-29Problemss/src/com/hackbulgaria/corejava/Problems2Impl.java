@@ -1,6 +1,8 @@
 package com.hackbulgaria.corejava;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 public class Problems2Impl implements Problems2 {
@@ -26,7 +28,6 @@ public class Problems2Impl implements Problems2 {
     }
 
     @Override
-    // test fixed
     public int min(int... array) {
         if (array.length == 0) {
             System.out.println("Empty input!");
@@ -57,7 +58,6 @@ public class Problems2Impl implements Problems2 {
         return sum / array.length;
     }
 
-    // @Override
     @Override
     public long getSmallestMultiple(int upperBound) {
         long result = 1;
@@ -100,7 +100,6 @@ public class Problems2Impl implements Problems2 {
     public boolean isPalindrome(int number) {
         long numberLong = (long) number;
         return isPalindrome(numberLong);
-
     }
 
     public boolean isPalindrome(long number) {
@@ -149,36 +148,34 @@ public class Problems2Impl implements Problems2 {
         return result;
     }
 
-    // fix
     @Override
     public long pow(int a, int b) {
-        long result = 1;
-        if (a == 1) {
-            return b;
+
+        if (b == 0) {
+            return 1;
+        } else {
+            return a * pow(a, b - 1);
         }
-        result = b * pow(a - 1, b);
-        return result;
     }
 
-    // fix
     @Override
     public int getOddOccurrence(int[] array) {
 
-        Stack<Integer> stackOfIntegers = new Stack<>();
+        List<Integer> listOfIntegers = new ArrayList<>();
 
-        for (int i = 0; i < array.length; i++) {
-
-            if (!(stackOfIntegers.contains(array[i]))) {
-                stackOfIntegers.push(array[i]);
+        for (Integer integer : array) {
+            if (listOfIntegers.contains(integer)) {
+                int index = listOfIntegers.indexOf(integer);
+                listOfIntegers.remove(index);
             } else {
-                stackOfIntegers.pop();
+                listOfIntegers.add(integer);
             }
         }
-        if (!(stackOfIntegers.isEmpty())) {
-            Integer result = stackOfIntegers.pop();
-            return result;
-        } else {
+
+        if (listOfIntegers.isEmpty()) {
             return -1;
+        } else {
+            return listOfIntegers.get(0);
         }
     }
 
@@ -190,8 +187,9 @@ public class Problems2Impl implements Problems2 {
             return -1;
         }
 
-        int[] max = new int[a.length];
         int maxx = 0;
+        int sum = 0;
+
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < b.length; j++) {
                 int n = a[i] * b[j];
@@ -199,12 +197,11 @@ public class Problems2Impl implements Problems2 {
                     maxx = n;
                 }
             }
-            max[i] = maxx;
+
+            sum = sum + maxx;
+            maxx = 0;
         }
-        int sum = 0;
-        for (int c = 0; c < max.length; c++) {
-            sum = sum + max[c];
-        }
+
         return sum;
     }
 
@@ -311,43 +308,93 @@ public class Problems2Impl implements Problems2 {
         return 0;
     }
 
-    // fix
     @Override
     public int countOcurrences(String needle, String haystack) {
-        if (haystack == "") {
-            return 0;
-        } else {
-            int count = 0;
-            while (needle.contains(haystack)) {
-                count++;
-                needle.replace(haystack, "");
-            }
-            return count;
+
+        int count = 0;
+        while (haystack.contains(needle)) {
+            count++;
+            int index = haystack.indexOf(needle);
+            haystack = haystack.substring(0, index)
+                    + haystack.substring(index, index + needle.length()).replace(needle, "")
+                    + haystack.substring(index + needle.length() + 1, haystack.length());
         }
+        return count;
     }
 
     @Override
     public String decodeURL(String input) {
-        // TODO Auto-generated method stub
-        return null;
+        // %20=>' ' %3A=>':' %3D=>'?' %2F=>'/'
+        StringBuilder inputBuilder = new StringBuilder(input);
+        while (input.contains("%20")) {
+            inputBuilder.replace(inputBuilder.indexOf("%20"), inputBuilder.indexOf("%20") + 3, "");
+            input = inputBuilder.toString();
+        }
+        while (input.contains("%3A")) {
+            inputBuilder.replace(inputBuilder.indexOf("%3A"), inputBuilder.indexOf("%3A") + 3, ":");
+            input = inputBuilder.toString();
+        }
+        while (input.contains("%3D")) {
+            inputBuilder.replace(inputBuilder.indexOf("%3D"), inputBuilder.indexOf("%3D") + 3, "?");
+            input = inputBuilder.toString();
+        }
+        while (input.contains("%2F")) {
+            inputBuilder.replace(inputBuilder.indexOf("%2F"), inputBuilder.indexOf("%2F") + 3, "/");
+            input = inputBuilder.toString();
+        }
+        return inputBuilder.toString();
     }
 
     @Override
     public int sumOfNumbers(String input) {
-        // TODO Auto-generated method stub
-        return 0;
+        String[] numbers = input.split("[a-zA-Z _]+");
+        int sum = 0;
+
+        for (String number : numbers) {
+
+            while (number.startsWith("0")) {
+                number = number.substring(1, number.length());
+            }
+            if (number.equals("")) {
+                number = "0";
+            }
+            sum = sum + Integer.parseInt(number);
+        }
+        return sum;
     }
 
     @Override
     public boolean areAnagrams(String A, String B) {
-        // TODO Auto-generated method stub
-        return false;
+        if (A.length() != B.length()) {
+            return false;
+        }
+
+        return hasAnagramOf(A, B);
     }
 
     @Override
     public boolean hasAnagramOf(String string, String string2) {
-        // TODO Auto-generated method stub
+        char[] chars = string.toCharArray();
+        char[] chars2 = string2.toCharArray();
+
+        Stack<Character> stackOfChar = new Stack<>();
+
+        for (Character characterA : chars) {
+            stackOfChar.push(characterA);
+        }
+
+        for (Character characterB : chars2) {
+            for (Character characterA : chars) {
+                if (characterB.equals(characterA) && !stackOfChar.isEmpty()) {
+                    stackOfChar.pop();
+                }
+            }
+        }
+
+        if (stackOfChar.isEmpty()) {
+            return true;
+        }
+
         return false;
     }
-
 }
