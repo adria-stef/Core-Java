@@ -1,0 +1,15 @@
+package com.hackbulgaria.javacore.structureddata;
+
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Utils {
+    public static String readFrom(Path path) throws IOException {
+        byte[] byteArray = Files.readAllBytes(path);
+        String string = new String(byteArray, Charset.defaultCharset());
+        return string;
+    }
+
+}

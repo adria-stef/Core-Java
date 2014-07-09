@@ -1,0 +1,54 @@
+package com.hackbulgaria.javacore.oop2;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+public class TimeTracker {
+
+    public Map<String, OperationInfo> operationsMap = new HashMap<>();
+
+    public TimeTracker() {
+    }
+
+    public void start(String operationName) {
+        OperationInfo operationInfo = new OperationInfo(operationName);
+        operationInfo.setStartCurrentTime(System.currentTimeMillis());
+        operationsMap.put(operationName, operationInfo);
+    }
+
+    public void update(String operationName) {
+        OperationInfo operationInfo = operationsMap.get(operationName);
+        operationInfo.addElementToList(new Date());
+    }
+
+    public void finish(String operationName) {
+        OperationInfo operationInfo = operationsMap.get(operationName);
+        operationInfo.setEndCurrentTime(System.currentTimeMillis());
+    }
+
+    private long getTime(OperationInfo operationInfo) {
+        return operationInfo.getEndCurrentTime() - operationInfo.getStartCurrentTime();
+    }
+
+    public String getReport(String operationName) {
+
+        OperationInfo operationInfo = operationsMap.get(operationName);
+
+        Date startDate = new Date(operationInfo.getStartCurrentTime());
+        Date endDate = new Date(operationInfo.getEndCurrentTime());
+
+        long time = getTime(operationInfo);
+
+        StringBuilder executionTimeString = new StringBuilder("Operation " + operationInfo.getOperationName()
+                + " took " + time + " ms." + "\n" + startDate + " - started" + "\n" + endDate + " - finished" + "\n");
+        
+        StringBuilder updateTimeString = new StringBuilder();
+        for (Date date : operationInfo.getList()) {
+            updateTimeString.append("next update: " + date + "\n");
+        }
+        
+        return executionTimeString.append(updateTimeString).toString();
+
+    }
+}

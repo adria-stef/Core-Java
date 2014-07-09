@@ -1,0 +1,24 @@
+package com.hackbulgaria.javacore.structureddata;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Student adi = new Student(1, "Adriana Stefanova");
+        Student random = new Student(2, "Random Guy");
+        
+        List<Student> enrolledStudents = new ArrayList<>();
+        enrolledStudents.add(adi);
+        enrolledStudents.add(random);
+        
+        CoreJavaCourse coreJavaCourse = new CoreJavaCourse(enrolledStudents, 3, "Core-Java");
+        
+        
+
+    }
+
+}

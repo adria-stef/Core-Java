@@ -1,0 +1,39 @@
+package com.hackbulgaria.javacore.structureddata;
+
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Student adi = new Student(1, "Adriana Stefanova");
+        Student random = new Student(2, "Random Guy");
+
+        List<Student> enrolledStudents = new ArrayList<>();
+        enrolledStudents.add(adi);
+        enrolledStudents.add(random);
+
+        CoreJavaCourse coreJavaCourse = new CoreJavaCourse(enrolledStudents, 3, "Core-Java");
+
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(CoreJavaCourse.class, Student.class);
+            Marshaller marshaller = jaxbContext.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+            Path path = Paths.get("E:\\Adii\\Documents\\CoreJava\\notes\\temp.txt");
+            File file = path.toFile();
+            marshaller.marshal(coreJavaCourse, file);
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+}

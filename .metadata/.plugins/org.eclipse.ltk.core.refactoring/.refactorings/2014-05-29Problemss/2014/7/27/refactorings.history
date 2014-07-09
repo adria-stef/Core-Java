@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;checksum&apos; in &apos;com.hackbulgaria.corejava.Problems2Impl.canBalance(...)&apos; to &apos;firstSum&apos;&#x0D;&#x0A;- Original project: &apos;2014-05-29Problemss&apos;&#x0D;&#x0A;- Original element: &apos;com.hackbulgaria.corejava.Problems2Impl.canBalance(int[]).checksum&apos;&#x0D;&#x0A;- Renamed element: &apos;checksum&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;checksum&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.hackbulgaria.corejava{Problems2Impl.java[Problems2Impl~canBalance~\[I@checksum!6240!6256!6244!6251!I!0!false" name="firstSum" references="true" stamp="1404294856676" version="1.0"/>
+</session>

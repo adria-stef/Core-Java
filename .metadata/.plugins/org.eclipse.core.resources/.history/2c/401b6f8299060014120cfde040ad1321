@@ -1,0 +1,62 @@
+package com.hackbulgaria.javacore.oop2;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+public class TimeTracker {
+
+    public String operationName;
+    public Map<String, OperationInfo> map = new HashMap<>();
+
+    public TimeTracker() {
+    }
+
+
+    public void start(String operationName) {
+        OperationInfo operationInfo = new OperationInfo(operationName);
+        operationInfo.setStartCurrentTime(System.currentTimeMillis());
+        map.put(operationName, operationInfo);
+    }
+
+
+    public void update(String operationName) {
+        OperationInfo operationInfo = map.get(operationName);
+        operationInfo.setUpdateDate(new Date());
+        Date date = operationInfo.getUpdateDate();
+        operationInfo.addElementToList(date);
+    }
+
+    public void finish(String operationName) {
+        OperationInfo operationInfo = map.get(operationName);
+        operationInfo.setEndCurrentTime(System.currentTimeMillis());
+    }
+
+
+    private long getTime(OperationInfo operationInfo) {
+        return operationInfo.getEndCurrentTime() - operationInfo.getStartCurrentTime();
+    }
+
+    public String getReport(String operationName) {
+
+        OperationInfo operationInfo = map.get(operationName);
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM dd,yyyy HH:mm");
+        Date startDate = new Date(operationInfo.getStartCurrentTime());
+        Date endDate = new Date(operationInfo.getEndCurrentTime());
+
+        if (operationInfo.getEndCurrentTime() == 0) {
+            operationInfo.setEndCurrentTime(System.currentTimeMillis());
+        }
+
+        long time = operationInfo.get;
+
+        String returnString = "Operation " + operationInfo.getOperationName() + " took " + time + " ms.";
+        // String.valueOf(time);
+        returnString += operationName;
+        return returnString;
+
+    }
+
+}

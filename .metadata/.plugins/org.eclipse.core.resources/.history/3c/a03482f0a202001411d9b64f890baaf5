@@ -1,0 +1,11 @@
+package com.hackbulgaria.javacore.pairprogramming;
+
+import java.io.File;
+
+public abstract class AsciiPlayer {
+
+    protected File file;
+
+    public abstract void play(File file);
+
+}

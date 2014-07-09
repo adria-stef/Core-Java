@@ -1,0 +1,54 @@
+package com.hackbulgaria.javacore.oop2;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+public class TimeTracker {
+
+    private Date startDate;
+    private Date updateDate;
+    private Date endDate;
+
+    public String operationName;
+    public Map<String, OperationInfo> map = new HashMap<>();
+
+    public TimeTracker() {
+    }
+
+
+    public void start(String operationName) {
+        OperationInfo operationInfo = new OperationInfo(operationName);
+        operationInfo.setStartDate(new Date());
+        operationInfo.setStartCurrentTime(System.currentTimeMillis());
+        map.put(operationName, operationInfo);
+    }
+
+
+    // public void update(String operationName) {
+    // this.operationName = operationName;
+    // this.updateDate = new Date();
+    // updateNow = System.currentTimeMillis();
+    //
+    // }
+
+    public void finish(String operationName) {
+        OperationInfo operationInfo = map.get(operationName);
+        operationInfo.setFinishDate(new Date());
+        operationInfo.setEndCurrentTime(System.currentTimeMillis());
+    }
+
+    public String getReport(String operationName) {
+        this.operationName = operationName;
+
+        if (endNow == 0) {
+            endNow = System.currentTimeMillis();
+        }
+
+        long time = endNow - startNow;
+        String timeString = String.valueOf(time);
+        return timeString;
+
+    }
+
+}

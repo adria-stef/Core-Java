@@ -1,0 +1,12 @@
+package com.hackbulgaria.javacore.pairprogramming;
+
+import java.io.File;
+
+public class PlayerFactory {
+
+    public static AsciiPlayer newAsciiPlayer(File file) {
+        return new PictureAsciiPlayer(file);
+
+
+    }
+}

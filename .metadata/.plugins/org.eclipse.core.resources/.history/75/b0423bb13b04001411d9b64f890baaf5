@@ -1,0 +1,18 @@
+package com.hackbulgaria.javacore.structureddata;
+
+import java.util.List;
+
+public class CoreJavaCourse {
+
+    private List<Student> enrolledStudents;
+    private int courseId;
+    private String courseName;
+    
+    public CoreJavaCourse(List<Student> enrolledStudents, int courseId, String courseName) {
+        super();
+        this.enrolledStudents = enrolledStudents;
+        this.courseId = courseId;
+        this.courseName = courseName;
+    }
+
+}

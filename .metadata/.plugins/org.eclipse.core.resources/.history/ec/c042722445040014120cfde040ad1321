@@ -1,0 +1,23 @@
+package com.hackbulgaria.javacore.structureddata;
+
+
+public class XmlParser {
+
+    public static void main(String[] args) {
+        // Out of memory
+        // try {
+        //
+        // File fXmlFile = new
+        // File("E:\\Adii\\Documents\\CoreJava\\resources\\metawiki-latest-stub-articles.xml");
+        // DocumentBuilderFactory dbFactory =
+        // DocumentBuilderFactory.newInstance();
+        // DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+        // Document doc = dBuilder.parse(fXmlFile);
+        // doc.getDocumentElement().normalize();
+        //
+        // System.out.println("Root element :" + doc.getDocumentElement());
+        // } catch (Exception e) {
+        // e.printStackTrace();
+        // }
+    }
+}

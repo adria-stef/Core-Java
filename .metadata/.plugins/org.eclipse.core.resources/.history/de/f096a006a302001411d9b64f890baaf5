@@ -1,0 +1,19 @@
+package com.hackbulgaria.javacore.pairprogramming;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        File file = new File(args[0]);
+        AsciiPlayer player = PlayerFactory.newAsciiPlayer(file);
+        player.play(file);
+        // BufferedImage image = createImage(file);
+        // // Color[][] pixels = getPixels(image);
+        // Color[][] pixels = getPixelsForLargerImages(image);
+        // char[][] result = renderImage(pixels);
+        // printRenderedImage(result);
+    }
+
+}

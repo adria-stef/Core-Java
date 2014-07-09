@@ -1,0 +1,20 @@
+package com.hackbulgaria.javacore.oop2;
+
+import java.util.Date;
+
+public class TimeTracker {
+    public static String operationName;
+
+    private Date start(String operationName) {
+        operationName = operationName;
+    }
+
+    private Date finish(String operationName) {
+        operationName = operationName;
+    }
+    
+    public getReport(oper){
+        
+    }
+    
+}

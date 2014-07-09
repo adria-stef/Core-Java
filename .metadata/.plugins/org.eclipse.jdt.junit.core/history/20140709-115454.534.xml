@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FaultyProblem1Test" project="2014-05-31DebuggingFun" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hackbulgaria.corejava.FaultyProblem1Test" time="0.0">
+    <testcase name="test" classname="com.hackbulgaria.corejava.FaultyProblem1Test" time="0.0"/>
+  </testsuite>
+</testrun>

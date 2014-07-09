@@ -1,0 +1,13 @@
+package com.hackbulgaria.javacore.pairprogramming;
+
+import java.io.File;
+
+public class VideoAsciiPlayer extends AsciiPlayer {
+
+    @Override
+    public void play(File file) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

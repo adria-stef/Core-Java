@@ -1,0 +1,9 @@
+package com.hackbulgaria.javacore.structureddata;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+    }
+
+}

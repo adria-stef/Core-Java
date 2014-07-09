@@ -8,5 +8,10 @@
     "location": "D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\test",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027D:\\Adii\\Documents\\CoreJava\\workspace\\Exam1\\test\u0027. Skipped."
+  },
+  "E:\\Adii\\Documents\\CoreJava\\teamWork\\src": {
+    "location": "E:\\Adii\\Documents\\CoreJava\\teamWork\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027E:\\Adii\\Documents\\CoreJava\\teamWork\\src\u0027. Skipped."
   }
 }

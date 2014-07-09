@@ -1,0 +1,12 @@
+package com.hackbulgaria.javacore.pairprogramming;
+
+import java.io.File;
+import java.io.IOException;
+
+public abstract class AsciiPlayer {
+
+    protected File file;
+
+    public abstract void play(File file) throws IOException;
+
+}

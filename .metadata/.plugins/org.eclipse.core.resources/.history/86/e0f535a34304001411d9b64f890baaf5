@@ -1,0 +1,16 @@
+package com.hackbulgaria.javacore.structureddata;
+
+import java.io.File;
+
+import javax.swing.text.Document;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+public class XmlParser {
+    
+    File fXmlFile = new File("E:\\Adii\\Documents\\CoreJava\\resources\\metawiki-latest-stub-articles.xml");
+    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+    Document doc = dBuilder.parse(fXmlFile);
+
+}

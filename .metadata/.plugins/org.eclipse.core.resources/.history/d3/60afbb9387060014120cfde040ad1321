@@ -1,0 +1,8 @@
+package com.hackbulgaria.javacore.oop2;
+
+public class Main {
+    public static void main(String[] args) {
+        TimeTracker timeTracker = new TimeTracker();
+        System.out.println(timeTracker.startDate);
+    }
+}

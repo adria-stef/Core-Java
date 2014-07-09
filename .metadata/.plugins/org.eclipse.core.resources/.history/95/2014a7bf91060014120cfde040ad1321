@@ -1,0 +1,18 @@
+package com.hackbulgaria.javacore.oop2;
+
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 0;
+        TimeTracker timeTracker = new TimeTracker();
+        Date d = timeTracker.start("aa");
+
+        for (int i = 0; i < 10000000; i++) {
+            a++;
+        }
+        Date date = timeTracker.finish("aa");
+
+        System.out.println(timeTracker.getReport("aa"));
+    }
+}

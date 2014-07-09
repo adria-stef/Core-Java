@@ -1,0 +1,11 @@
+package com.hackbulgaria.javacore.structureddata;
+
+import java.util.List;
+
+public class CoreJavaCourse {
+
+    private List<Student> enrolledStudents;
+    private int courseId;
+    private String courseName;
+
+}

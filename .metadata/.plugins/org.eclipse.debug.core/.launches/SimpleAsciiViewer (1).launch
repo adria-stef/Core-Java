@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/AsciiViewer/src/com/hackbulgaria/javacore/pairprogramming/SimpleAsciiViewer.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.hackbulgaria.javacore.pairprogramming.SimpleAsciiViewer"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="C:\Users\Adriana\Desktop\car.jpg"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="AsciiViewer"/>
+</launchConfiguration>

@@ -1,0 +1,23 @@
+package com.hackbulgaria.javacore.pairprogramming;
+
+import java.io.File;
+import java.io.IOException;
+
+public class PlayerFactory {
+
+    public static AsciiPlayer newAsciiPlayer(File file) throws IOException {
+        String canonicalPath = file.getCanonicalPath();
+        if (canonicalPath.endsWith(".jpg")) {
+            return new PictureAsciiPlayer(file);
+        } else if (canonicalPath.endsWith(".gif")) {
+            return new GifAsciiPlayer(file);
+        } else if (canonicalPath.endsWith(".mp4")) {
+            return new VideoAsciiPlayer(file);
+        } else {
+            return null;
+        }
+
+        
+
+    }
+}

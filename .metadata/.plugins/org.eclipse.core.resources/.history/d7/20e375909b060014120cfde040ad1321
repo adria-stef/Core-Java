@@ -1,0 +1,55 @@
+package com.hackbulgaria.javacore.oop2;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class OperationInfo {
+
+    private String operationName;
+    private long startTime;
+    private long endCurrentTime;
+    private List<Date> updatesList = new ArrayList<>();
+
+    public OperationInfo(String operationName) {
+        this.operationName = operationName;
+
+    }
+
+
+    public String getOperationName() {
+        return operationName;
+    }
+
+    public void setOperationName(String operationName) {
+        this.operationName = operationName;
+    }
+
+    public List<Date> getList() {
+        return updatesList;
+    }
+
+    public void setList(List<Date> list) {
+        this.updatesList = list;
+    }
+
+    public long getStartCurrentTime() {
+        return startTime;
+    }
+
+    public void setStartCurrentTime(long startCurrentTime) {
+        this.startTime = startCurrentTime;
+    }
+
+    public long getEndCurrentTime() {
+        return endCurrentTime;
+    }
+
+    public void setEndCurrentTime(long endCurrentTime) {
+        this.endCurrentTime = endCurrentTime;
+    }
+
+    public void addElementToList(Date date) {
+        updatesList.add(date);
+    }
+}

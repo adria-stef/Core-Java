@@ -1,0 +1,52 @@
+package com.hackbulgaria.javacore.oop2;
+
+import java.util.Date;
+
+public class TimeTracker {
+
+    public String operationName;
+    public Date startDate;
+    public Date endDate;
+    long startNow;
+    long endNow;
+
+    public TimeTracker() {
+        this.startNow = 0;
+        this.endNow = 0;
+    }
+
+
+    public Date start(String operationName) {
+        this.operationName = operationName;
+        this.startDate = new Date();
+        startNow = System.currentTimeMillis();
+        return startDate;
+    }
+
+
+    // public Date update(String operationName) {
+    //
+    //
+    // }
+
+    public Date finish(String operationName) {
+        this.operationName = operationName;
+        this.endDate = new Date();
+        endNow = System.currentTimeMillis();
+        return endDate;
+    }
+
+    public String getReport(String operationName) {
+        this.operationName = operationName;
+
+        if (endNow == 0) {
+            endNow = System.currentTimeMillis();
+        }
+
+        long time = endNow - startNow;
+        String timeString = String.valueOf(time);
+        return timeString;
+
+    }
+
+}
