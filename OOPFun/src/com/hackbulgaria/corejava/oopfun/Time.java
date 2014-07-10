@@ -1,6 +1,7 @@
 package com.hackbulgaria.corejava.oopfun;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Time {
     
@@ -29,10 +30,25 @@ public class Time {
     int minute = calendar.get(Calendar.MINUTE);
     int second = calendar.get(Calendar.SECOND);
     
+    private static Time now() {
+                
+        Calendar now = GregorianCalendar.getInstance();
+        
+        int dayNow = now.get(GregorianCalendar.DAY_OF_MONTH);
+        int monthNow = now.get(GregorianCalendar.MONTH);
+        int yearNow = now.get(GregorianCalendar.YEAR);
+        
+        int hourNow = now.get(GregorianCalendar.HOUR_OF_DAY);
+        int minuteNow = now.get(GregorianCalendar.MINUTE);
+        int secondNow = now.get(GregorianCalendar.SECOND);
+        
+        Time time = new Time(dayNow, monthNow, yearNow, hourNow, minuteNow, secondNow);
+        return time;
+    }
+
     @Override
     public String toString() {
         String formatedDate = String.format("%d:%d:%d %d.%d.%d", hour, minute, second, day, month, year);
         return formatedDate;
     }
-    
 }
