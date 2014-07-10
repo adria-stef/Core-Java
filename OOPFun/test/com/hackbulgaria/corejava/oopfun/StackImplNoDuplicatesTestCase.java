@@ -1,6 +1,6 @@
 package com.hackbulgaria.corejava.oopfun;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
 import org.junit.Before;
@@ -22,8 +22,7 @@ public class StackImplNoDuplicatesTestCase {
     @Test
     public void testDuplicates() {
 
-        StackImpl<Object> stack = new StackImpl<Object>();
-        stack = new StackImpl<>();
+        StackImplNoDuplicates<Object> stack = new StackImplNoDuplicates<Object>();
 
         stack.push(1);
         stack.push(2);
@@ -38,8 +37,7 @@ public class StackImplNoDuplicatesTestCase {
     
     @Test
     public void testToString () {
-        StackImpl<Object> stack = new StackImpl<Object>();
-        stack = new StackImpl<>();
+        StackImplNoDuplicates<Object> stack = new StackImplNoDuplicates<Object>();
 
         stack.push(1);
         stack.push(2);
