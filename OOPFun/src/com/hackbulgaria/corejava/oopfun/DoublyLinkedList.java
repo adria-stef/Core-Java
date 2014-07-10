@@ -106,7 +106,5 @@ public class DoublyLinkedList {
             System.out.println("Cannot get last!! The DoublyLinkedList is empty!!");
             return -1;
         }
-
     }
-
 }

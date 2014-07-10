@@ -1,6 +1,7 @@
 package com.hackbulgaria.corejava.oopfun;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -63,17 +64,16 @@ public class DoublyLinkedListTestCase {
         
         doublyLinkedList.addFirst(3);
         doublyLinkedList.addFirst(4);
-//        doublyLinkedList.addLast(2);
-//        doublyLinkedList.addFirst(5);
-//        doublyLinkedList.addLast(1);
-//        doublyLinkedList.addFirst(6);
-//        doublyLinkedList.addLast(7);
-//        doublyLinkedList.removeLast();
+        doublyLinkedList.addFirst(5);
+        doublyLinkedList.addFirst(6);
+        doublyLinkedList.addLast(2);
+        doublyLinkedList.addLast(1);
+        doublyLinkedList.addLast(7);
+        doublyLinkedList.removeLast();
         doublyLinkedList.removeFirst();
-        assertEquals(1, doublyLinkedList.size());
-        assertEquals(3, doublyLinkedList.getFirst());
-        //assertEquals(3, doublyLinkedList.getLast());
-        
+        assertEquals(5, doublyLinkedList.size());
+        assertEquals(5, doublyLinkedList.getFirst());
+        assertEquals(1, doublyLinkedList.getLast());
 
     }
     
@@ -95,8 +95,6 @@ public class DoublyLinkedListTestCase {
         doublyLinkedList.removeFirst();
         assertEquals(1, doublyLinkedList.getLast());
         assertEquals(2, doublyLinkedList.getFirst());
-
-        
         
     }
     
