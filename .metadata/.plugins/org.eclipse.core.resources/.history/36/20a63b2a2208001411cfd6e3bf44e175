@@ -1,0 +1,9 @@
+package com.hackbulgaria.javacore.game;
+
+import java.util.Stack;
+
+public class History {
+
+    Stack<GameState> history = new Stack<>();
+    
+}

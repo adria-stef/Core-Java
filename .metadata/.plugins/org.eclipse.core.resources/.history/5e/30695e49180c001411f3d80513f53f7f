@@ -1,0 +1,19 @@
+package com.hackbulgaria.javacore.networking1;
+
+import java.net.SocketException;
+
+public class FindReachables {
+
+    
+    public static void findReachables() throws SocketException {
+        String networkIp = FindMyOwnIp.getIp().toString();
+        int lastIndexOfDot = networkIp.lastIndexOf('.');
+        networkIp = networkIp.substring(1, lastIndexOfDot);
+        System.out.println(networkIp);
+
+    }
+
+    public static void main(String[] args) throws SocketException {
+        findReachables();
+    }
+}

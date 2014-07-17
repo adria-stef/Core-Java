@@ -1,0 +1,33 @@
+package com.hackbulgaria.javacore.networking1;
+
+import static java.lang.System.out;
+
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Collections;
+import java.util.Enumeration;
+
+public class FindMyOwnIp {
+    public static void main(String[] args) throws SocketException {
+        findAll();
+    }
+
+    public static void findAll() throws SocketException {
+        Enumeration<NetworkInterface> nets = NetworkInterface.getNetworkInterfaces();
+        for (NetworkInterface networkInterface : Collections.list(nets)) {
+            if (networkInterface.isUp() && !networkInterface.isLoopback() && !networkInterface.isVirtual()) {
+                System.out.println("My IP adress is:");
+
+                Enumeration<InetAddress> inetAddresses = networkInterface.getInetAddresses();
+                for (InetAddress inetAddress : Collections.list(inetAddresses)) {
+                    out.printf("InetAddress: %s\n", inetAddress);
+                }
+
+                System.out.println();
+            }
+
+        }
+
+    }
+}

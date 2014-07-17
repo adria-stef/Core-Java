@@ -1,0 +1,13 @@
+package com.hackbulgaria.javacore.networking1;
+
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
+
+public class FindMyOwnIp {
+
+    public void findAll() throws SocketException {
+        Enumeration<NetworkInterface> nets = NetworkInterface.getNetworkInterfaces();
+
+    }
+}

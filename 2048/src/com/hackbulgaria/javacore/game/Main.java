@@ -1,0 +1,35 @@
+package com.hackbulgaria.javacore.game;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException, CloneNotSupportedException {
+
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Controller controller = new Controller();
+
+        char foundChar;
+        do {
+            foundChar = (char) reader.read();
+            if (foundChar == 'w') {
+                controller.onCommand(Command.MOVE_UP);
+            }
+            if (foundChar == 'd') {
+                controller.onCommand(Command.MOVE_RIGHT);
+            }
+            if (foundChar == 's') {
+                controller.onCommand(Command.MOVE_DOWN);
+            }
+            if (foundChar == 'a') {
+                controller.onCommand(Command.MOVE_LEFT);
+            }
+
+        } while (foundChar != 'q');
+        controller.onCommand(Command.QUIT);
+    }
+
+}

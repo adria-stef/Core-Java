@@ -1,0 +1,161 @@
+package com.hackbulgaria.javacore.game;
+
+import java.util.Random;
+
+public class GameLogic {
+
+    private History history;
+
+    public GameLogic() throws CloneNotSupportedException {
+        history = new History();
+        history.setLastState(new GameState());
+        addNumber();
+    }
+
+    public void printMatrix() {
+        int matrix[][] = getMatrix();
+        int boardSize = getState().BOARD_SIZE;
+
+        for (int y = 0; y < boardSize; y++) {
+            for (int x = 0; x < boardSize; x++) {
+                System.out.print(matrix[y][x] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public void addGameStateToHistory(GameState gameState) {
+        history.setLastState(gameState);
+    }
+
+    public void addNumber() {
+        if (countFreePlaces() != 0) {
+            addGameStateToHistory(getState().clone());
+
+            int position = -1;
+            int randPosition = getRandom();
+            out: for (int y = 0; y < getState().BOARD_SIZE; y++) {
+                for (int x = 0; x < getState().BOARD_SIZE; x++) {
+                    if (getMatrix()[y][x] == 0) {
+                        position++;
+                    }
+                    if (randPosition == position) {
+                        place(y, x);
+                        break out;
+                    }
+                }
+            }
+        }
+    }
+
+    private int[][] getMatrix() {
+        return history.getLastGameState().getMatrix();
+    }
+
+    private void place(int y, int x) {
+        if (getMatrix()[y][x] != 0) {
+            throw new IllegalStateException();
+        }
+        double randDouble = Math.random();
+        if (randDouble >= 0.9) {
+            getMatrix()[y][x] = 4;
+        } else {
+            getMatrix()[y][x] = 2;
+        }
+    }
+
+    public void moveUp() {
+        addGameStateToHistory(getState().clone());
+
+        boolean[][] isDoubled = new boolean[getState().BOARD_SIZE][getState().BOARD_SIZE];
+
+        for (int x = 0; x < getState().BOARD_SIZE; x++) {
+            for (int y = 1; y < getState().BOARD_SIZE; y++) {
+
+                int newY = y - 1;
+
+                while (true) {
+                    if (!isInBounds(newY, x)) {
+                        newY++;
+                        getMatrix()[newY][x] = getMatrix()[y][x];
+                        getMatrix()[y][x] = 0;
+                        break;
+                    }
+                    if (getMatrix()[newY][x] != 0) {
+                        if (getMatrix()[newY][x] == getMatrix()[y][x]) {
+                            getMatrix()[newY][x] = 2 * getMatrix()[y][x];
+                            getMatrix()[y][x] = 0;
+                        } else {
+                            newY++;
+                            getMatrix()[newY][x] = getMatrix()[y][x];
+                            getMatrix()[y][x] = 0;
+                        }
+                        break;
+                    }
+                    newY--;
+                }
+
+
+                // while (isInBounds(newY, x) && !isDoubled[newY][x]) {
+                // if (getMatrix()[newY][x] == 0) {
+                // getMatrix()[newY][x] = getMatrix()[y][x];
+                // getMatrix()[y][x] = 0;
+                // }
+                //
+                // if (getMatrix()[newY][x] != 0 && getMatrix()[y][x] ==
+                // getMatrix()[newY][x] && !isDoubled[y][x]) {
+                // getMatrix()[newY][x] = getMatrix()[y][x] +
+                // getMatrix()[newY][x];
+                // getMatrix()[y][x] = 0;
+                // isDoubled[newY][x] = true;
+                // }
+                // newY--;
+                // }
+            }
+        }
+    }
+
+    private boolean isInBounds(int x, int y) {
+        if (x >= 0 && y >= 0 && x < getState().BOARD_SIZE && y < getState().BOARD_SIZE) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void moveLeft() {
+        getState();
+    }
+
+    private void moveRight() {
+        getState();
+    }
+
+    private void moveDown() {
+        getState();
+    }
+
+    private int countFreePlaces() {
+        int counter = 0;
+        for (int i = 0; i < getState().BOARD_SIZE; i++) {
+            for (int j = 0; j < getState().BOARD_SIZE; j++) {
+                if (getMatrix()[i][j] == 0) {
+                    counter++;
+                }
+            }
+        }
+
+        return counter;
+    }
+
+    private int getRandom() {
+        int numberOfFreePlaces = countFreePlaces();
+        Random rand = new Random();
+        return rand.nextInt(numberOfFreePlaces);
+    }
+
+    public GameState getState() {
+        return history.getLastGameState();
+    }
+}

@@ -88,5 +88,15 @@
     "location": "E:\\Adii\\Documents\\CoreJava\\workspace\\StructuredData\\src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027E:\\Adii\\Documents\\CoreJava\\workspace\\StructuredData\\src\u0027. Skipped."
+  },
+  "E:\\Adii\\Documents\\CoreJava\\workspace\\OOP2\\src": {
+    "location": "E:\\Adii\\Documents\\CoreJava\\workspace\\OOP2\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027E:\\Adii\\Documents\\CoreJava\\workspace\\OOP2\\src\u0027. Skipped."
+  },
+  "E:\\Adii\\Documents\\CoreJava\\workspace\\OOPFun\\src": {
+    "location": "E:\\Adii\\Documents\\CoreJava\\workspace\\OOPFun\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027E:\\Adii\\Documents\\CoreJava\\workspace\\OOPFun\\src\u0027. Skipped."
   }
 }

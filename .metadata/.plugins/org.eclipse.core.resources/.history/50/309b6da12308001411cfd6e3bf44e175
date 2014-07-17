@@ -1,0 +1,14 @@
+package com.hackbulgaria.javacore.game;
+
+import java.awt.image.SinglePixelPackedSampleModel;
+import java.util.ArrayList;
+
+public class History {
+
+    ArrayList<GameState> history = new ArrayList<>();
+
+    public GameState getLastGameState() {
+        return history.get(history.size() - 1);
+    }
+
+}

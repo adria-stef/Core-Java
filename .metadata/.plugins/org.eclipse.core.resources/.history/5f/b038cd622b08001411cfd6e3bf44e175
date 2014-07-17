@@ -1,0 +1,17 @@
+package com.hackbulgaria.javacore.game;
+
+import java.util.ArrayList;
+
+public class History {
+
+    ArrayList<GameState> history = new ArrayList<>();
+
+    public GameState getLastGameState() {
+        return history.get(history.size() - 1);
+    }
+    
+    public void setLastState(GameState gameState){
+        history.add(gameState);
+    }
+
+}

@@ -1,0 +1,35 @@
+package com.hackbulgaria.javacore.game;
+
+public class Controller {
+
+    private GameLogic gameLogic;
+
+    public Controller() {
+        gameLogic = new GameLogic();
+    }
+    public void onCommand(Command command) {
+        switch (command) {
+            case MOVE_UP:
+                System.out.println("mrudnah nagore");
+                break;
+            case MOVE_DOWN:
+
+                break;
+
+            case MOVE_LEFT:
+
+                break;
+
+            case MOVE_RIGHT:
+
+                break;
+            case QUIT:
+
+                break;
+
+            default:
+                break;
+        }
+    }
+
+}

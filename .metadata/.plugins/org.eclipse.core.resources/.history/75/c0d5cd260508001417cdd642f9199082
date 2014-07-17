@@ -1,0 +1,41 @@
+package com.hackbulgaria.corejava.oopfun;
+
+public class StackImplementationLinkedList<T> extends DoublyLinkedLis<T> implements Stack<T> {
+
+    @Override
+    public void push(T t) {
+        addLast(t);
+    }
+
+    @Override
+    public Object pop() {
+        return removeLast();
+    }
+
+    @Override
+    public int length() {
+        return size();
+    }
+
+    @Override
+    public void clear() {
+        while (this.length() != 0) {
+            removeLast();
+        }
+    }
+
+    @Override
+    public boolean isEmpty() {
+        if (this.length() == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public Object peek() {
+        return getLast();
+    }
+
+}

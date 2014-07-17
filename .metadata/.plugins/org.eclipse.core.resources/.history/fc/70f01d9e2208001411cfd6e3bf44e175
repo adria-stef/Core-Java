@@ -1,0 +1,7 @@
+package com.hackbulgaria.javacore.game;
+
+public class GameState {
+
+    private int matrix[][] = new int[4][4];
+
+}

@@ -1,0 +1,10 @@
+package com.hackbulgaria.javacore.game;
+
+import java.util.ArrayList;
+
+public class History {
+
+    ArrayList<GameState> history = new ArrayList<>();
+
+
+}

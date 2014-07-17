@@ -1,0 +1,29 @@
+package com.hackbulgaria.javacore.game;
+
+public class GameState {
+
+    private final int BOARD_SIZE = 4;
+    private int matrix[][] = new int[BOARD_SIZE][BOARD_SIZE];
+
+    public GameState(int[][] matrix) {
+        this.matrix = matrix;
+        for (int i = 0; i < BOARD_SIZE; i++) {
+            for (int j = 0; j < BOARD_SIZE; j++) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+
+    public int[][] getMatrix() {
+        return matrix;
+    }
+
+    public void setMatrix(int[][] matrix) {
+        this.matrix = matrix;
+    }
+
+    public int getBOARD_SIZE() {
+        return BOARD_SIZE;
+    }
+
+}

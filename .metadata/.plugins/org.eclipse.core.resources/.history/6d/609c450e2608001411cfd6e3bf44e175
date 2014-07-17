@@ -1,0 +1,26 @@
+package com.hackbulgaria.javacore.game;
+
+public class GameState {
+
+    private final int row = 4;
+    private final int column = 4;
+    private int matrix[][] = new int[column][row];
+
+    public GameState(int[][] matrix) {
+        this.matrix = matrix;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+}
