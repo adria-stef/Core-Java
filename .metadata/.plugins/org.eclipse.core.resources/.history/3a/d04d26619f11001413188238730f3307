@@ -11,8 +11,7 @@ import org.apache.commons.io.IOUtils;
 public class ImageDownloader {
     public static void main(String[] args) {
         try {
-            URL photo = new URL("http://www.emperor-penguin.com/penguin-chick.jpg");
-            URL video = new URL("http://search.data.bg/download/ZGJnZGxfMjc4Mjg5NjE=");
+            URL photo = new URL("http://upload.wikimedia.org/wikipedia/commons/9/9a/PNG_transparency_demonstration_2.png");
 
             byte[] byteArray = IOUtils.toByteArray(photo.openStream());
             String pathName = "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg";

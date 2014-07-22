@@ -11,11 +11,9 @@ import org.apache.commons.io.IOUtils;
 public class ImageDownloader {
     public static void main(String[] args) {
         try {
-            URL photo = new URL("http://www.emperor-penguin.com/penguin-chick.jpg");
-            URL video = new URL("http://search.data.bg/download/ZGJnZGxfMjc4Mjg5NjE=");
+            URL photo = new URL("http://d3dsacqprgcsqh.cloudfront.net/photo/aozrdx0_700b.jpg");
 
             byte[] byteArray = IOUtils.toByteArray(photo.openStream());
-            String pathName = "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg";
 
             // FileOutputStream fileOutputStream = new FileOutputStream(
             // "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg");
@@ -24,11 +22,12 @@ public class ImageDownloader {
 
             // BufferedImage image = ImageIO.read(new
             // ByteArrayInputStream(byteArray));
+            String pathname = "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg";
             // ImageIO.write(image, "jpg", new File(pathname));
 
-            FileUtils.writeByteArrayToFile(new File(pathName), byteArray);
+            FileUtils.writeByteArrayToFile(new File(pathname), byteArray);
 
-            Runtime.getRuntime().exec("explorer.exe " + pathName);
+            Runtime.getRuntime().exec("explorer.exe " + pathname);
 
         } catch (MalformedURLException e) {
             e.printStackTrace();

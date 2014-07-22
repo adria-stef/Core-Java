@@ -15,7 +15,7 @@ public class ImageDownloader {
             URL video = new URL("http://search.data.bg/download/ZGJnZGxfMjc4Mjg5NjE=");
 
             byte[] byteArray = IOUtils.toByteArray(photo.openStream());
-            String pathName = "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg";
+            String pathName = "E:\\Adii\\Documents\\CoreJava\\resources\\random.mp4";
 
             // FileOutputStream fileOutputStream = new FileOutputStream(
             // "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg");

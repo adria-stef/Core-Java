@@ -11,11 +11,11 @@ import org.apache.commons.io.IOUtils;
 public class ImageDownloader {
     public static void main(String[] args) {
         try {
-            URL photo = new URL("http://www.emperor-penguin.com/penguin-chick.jpg");
-            URL video = new URL("http://search.data.bg/download/ZGJnZGxfMjc4Mjg5NjE=");
+            URL photo = new URL(
+                    "http://search.data.bg/ready/f09e5bb28ce1392926e81b736e93a4bb/linkin_park_-_numb1.mp4");
 
             byte[] byteArray = IOUtils.toByteArray(photo.openStream());
-            String pathName = "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg";
+            String pathName = "E:\\Adii\\Documents\\CoreJava\\resources\\random.mp4";
 
             // FileOutputStream fileOutputStream = new FileOutputStream(
             // "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg");
