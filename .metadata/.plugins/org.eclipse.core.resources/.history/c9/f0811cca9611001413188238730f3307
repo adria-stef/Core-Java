@@ -1,0 +1,31 @@
+package com.hackbulgaria.corejava.networking2;
+
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
+
+import javax.imageio.ImageIO;
+
+public class ImageDownloader {
+    public static void main(String[] args) {
+        try {
+            URL photo = new URL ("http://d3dsacqprgcsqh.cloudfront.net/photo/aozrdx0_700b.jpg");
+            
+            
+            
+            
+            
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        
+    }
+    
+
+    
+    
+}

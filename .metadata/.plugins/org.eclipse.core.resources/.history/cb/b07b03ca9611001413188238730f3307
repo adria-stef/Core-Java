@@ -1,0 +1,5 @@
+package com.hackbulgaria.corejava.networking2;
+
+public class ImageDownloader {
+
+}

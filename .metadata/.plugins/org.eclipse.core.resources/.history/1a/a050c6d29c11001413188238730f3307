@@ -1,0 +1,41 @@
+package com.hackbulgaria.corejava.networking2;
+
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+
+import org.apache.commons.io.IOUtils;
+
+public class ImageDownloader {
+    public static void main(String[] args) {
+        try {
+            URL photo = new URL("http://d3dsacqprgcsqh.cloudfront.net/photo/aozrdx0_700b.jpg");
+
+            byte[] byteArray = IOUtils.toByteArray(photo.openStream());
+
+            // FileOutputStream fileOutputStream = new FileOutputStream(
+            // "E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg");
+            // fileOutputStream.write(byteArray);
+            // fileOutputStream.close();
+
+            // FileUtils.writeByteArrayToFile(new
+            // File("E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg"),
+            // byteArray);
+
+            BufferedImage image = ImageIO.read(new ByteArrayInputStream(byteArray));
+            ImageIO.write(image, "jpg", new File("E:\\Adii\\Documents\\CoreJava\\resources\\random.jpg"));
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+}

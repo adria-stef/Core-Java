@@ -28,10 +28,8 @@
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="-220" key="DIALOG_Y_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
 		<item value="150" key="DIALOG_X_ORIGIN"/>
-	</section>
-	<section name="NewWizardAction">
 	</section>
 	<section name="ZipFileExportWizard">
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
@@ -41,12 +39,14 @@
 			<item value="E:\Adii\Documents\CoreJava\sources\PairProgramming.zip"/>
 		</list>
 	</section>
-	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+	<section name="NewWizardAction">
 	</section>
 	<section name="FileSystemExportWizard">
 	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.ui.wizards.import.Preferences" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<item value="org.eclipse.jdt.internal.ui.fatjarpackager.JarPackageWizard" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>

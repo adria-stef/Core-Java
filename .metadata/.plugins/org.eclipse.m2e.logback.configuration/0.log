@@ -338,3 +338,4 @@ Caused by: java.nio.channels.UnresolvedAddressException: null
 2014-07-12 12:13:50,354 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
 2014-07-12 13:41:14,392 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
 2014-07-15 14:24:52,083 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-07-22 14:49:35,493 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8

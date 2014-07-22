@@ -1,0 +1,5 @@
+1406029655020	Rename type 'Test'
+1406030862341	Rename local variable 'in'
+1406031026813	Delete element
+1406031497458	Rename local variable 'fos'
+1406032595631	Extract local variable 'pathname'
